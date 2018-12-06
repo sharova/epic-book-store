@@ -38,28 +38,48 @@
       <ul class="contacts__list">
         <li class="contacts__list-item">Набережная реки Фонтанки, 202</li>
         <li class="contacts__list-item">с 9:00 до 19:00 ежедневно</li>
-        <li class="contacts__list-item">+7 (911) 123 45 67</li>
+        <li class="contacts__list-item"><a href="tel:+79111234567" class="contacts__list-item-phone">+7 (911) 123 45 67</a></li>
       </ul>
     </div>
     <div class="contacts__map"></div>
   </section>
 
-  <div class="form">
-    <h2 class="form__title">Есть вопросы?</h2>
-    <p class="form__describtion">Напишите нам на почту. Отвечаем в течение дня</p>
-    <form action="" class="form__field">
-      <input type="text" class="field-text" placeholder="Ваша почта">
-      <input type="text" class="field-text" placeholder="Пароль">
-      <input type="checkbox" class="field-checkbox">Я согласен(-на) с <a href="">политикой конфиденциальности</a> и <a href="">правилами обработки данных</a>
-      <button type="submit" class="field-action btn">Отправить</button>
+  <form action=""class="form">
+    <div class="form__inner">
+      <div class="form__header">
+        <h2 class="form__header-title">Есть вопросы?</h2>
+        <div class="form__header-describtion">
+          <p>Напишите нам на почту. Отвечаем в течение дня</p>
+        </div>
+      </div>
+      <div class="field-text">
+        <input type="text" class="field-text__input" placeholder="Ваша почта">
+      </div>
+      <div class="field-text">
+        <input type="text" class="field-text__input" placeholder="Пароль">
+      </div>
+      <div class="field-checkbox">
+        <label for="">
+          <input type="checkbox" class="field-checkbox">
+          <span class="field-checkbox__text">
+            Я согласен(-на) с <a href="">политикой конфиденциальности</a> и <a href="">правилами обработки данных</a>
+          </span>
+        </label>
+      </div>
+      <div class="field-action">
+        <button class="btn">Отправить</button>
+      </div>
     </form>
   </div>
+  </form>
 
 
   <div class="library">
     <div class="library__inner">
       <h2 class="library__title">Мы открыли для вас уютную библиотеку</h2>
-      <p class="library__describtion">Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
+      <div class="library__describtion">
+        <p>Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
+      </div>
     </div>
   </div>
 

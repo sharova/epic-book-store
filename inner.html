@@ -43,9 +43,9 @@
     <div class="product__image-wrap"><img src="" alt="" class="product__image"></div>
 
     <div class="product__preview-wrap">
-      <img src="" alt="" class="product__preview">
-      <img src="" alt="" class="product__preview">
-      <img src="" alt="" class="product__preview">
+      <a href="" class="product__preview-link"><img src="" alt="" class="product__preview"></a>
+      <a href="" class="product__preview-link"><img src="" alt="" class="product__preview"></a>
+      <a href="" class="product__preview-link"><img src="" alt="" class="product__preview"></a>
     </div>
 
     <div class="product__details-wrap">
@@ -69,40 +69,51 @@
       </table>
 
       <form action="" class="product__details-form">
-        <button type="submit" class="field-add btn">Добавить в корзину</button>
-        <input type="text" class="field-quantity" value="1">
-        <span class="product__details-quantity">шт.</span>
+        <div class="field-text">
+          <input type="text" class="field-text__input" value="1">
+          <span class="field-text__describtion">шт.</span>
+        </div>
+        <div class="field-action">
+          <button class="field-add btn">Добавить в корзину</button>
+        </div>
       </form>
 
-      <div class="product__details-likes">20 людям понравилась эта книга</div>
+      <p class="product__details-likes">20 людям понравилась эта книга</p>
     </div>
 
     <div class="product__describtion">
       <h2 class="product__describtion-title">Короткое описание</h2>
-      <p class="product__describtion-text">В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.</p>
-      <p class="product__describtion-text">Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.</p>
-      <a href="" class="product__describtion-link">Показать полностью</a>
+      <div class="product__describtion-text">
+        <p>В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.</p>
+        <p>Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.</p>
+
+        <button class="product__describtion-link">Показать полностью</button>
+
+        <p>В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.</p>
+        <p>Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.</p>
+      </div>
 
       <div class="product__social-wrap">
         <ul class="product__social">
-          <li class="product__social-item"><a href="" class="product__social-facebook">15</a></li>
-          <li class="product__social-item"><a href="" class="product__social-vkontakte">4</a></li>
-          <li class="product__social-item"><a href="" class="product__social-likes">150</a></li>
-          <li class="product__social-item"><a href="" class="product__social-dislikes">0</a></li>
+          <li class="product__social-item"><button class="product__social-facebook">15</button></li>
+          <li class="product__social-item"><button class="product__social-vkontakte">4</button></li>
+          <li class="product__social-item"><button class="product__social-likes">150</button></li>
+          <li class="product__social-item"><button class="product__social-dislikes">0</button></li>
         </ul>
       </div>
     </div>
 
   </div>
 
-  <section class="thematic">
-    <div class="thematic__inner">
-      <h2 class="thematic__title">Книги по тематике</h2>
-      <span class="thematic__more">Больше книг по теме</span>
+  <section class="latest">
+
+    <div class="latest__inner">
+      <h2 class="latest__title">Книги по тематике</h2>
+      <span class="latest__all">Больше книг по теме</span>
     </div>
 
-    <div class="thematic__list-wrap">
-      <div class="thematic__list">
+    <div class="latest__list-wrap">
+      <div class="latest__list">
 
         <article class="product-card-mini">
           <h2 class="product-card-mini__title"><a href="">Латеральная логика</a></h2>
@@ -135,7 +146,9 @@
   <div class="library">
     <div class="library__inner">
       <h2 class="library__title">Мы открыли для вас уютную библиотеку</h2>
-      <p class="library__describtion">Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
+      <div class="library__describtion">
+        <p>Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
+      </div>
     </div>
   </div>
 
