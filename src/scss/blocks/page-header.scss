@@ -1,0 +1,26 @@
+.page-header {
+  position: relative;
+  display: block;
+  height: 50px;
+  background-color: #fff;
+  overflow: hidden;
+
+  &__inner {
+
+  }
+}
+
+.main-nav__list {
+  list-style-type: none;
+}
+.main-nav__item {
+  display: inline-block;
+
+  @media (min-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
+
+}

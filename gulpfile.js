@@ -97,7 +97,7 @@ function serve() {
     open: false,
     port: 8080,
   });
-  watch(`${dir.src}scss/**/*.scss`, {delay: 100}, styles);
+  watch(`${dir.src}scss/**/*.scss`, {delay: 800}, styles);
   watch(`${dir.src}*.html').on('change`, series(copyHTML, browserSync.reload));
   watch(`${dir.src}js/**/*.js`).on('change', series(javascript, browserSync.reload));
 }
