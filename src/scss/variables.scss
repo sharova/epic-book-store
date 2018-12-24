@@ -1,18 +1,27 @@
-$main-color:          #7DCBCF;
-$main-color-dark:     #4AA2A5;
-$second-color:        #1F2455;
-$second-color-light:  #6A4099;
-$warning-color:       #FDC05D;
+$main-color:          #7dcbcf;
+$main-color-dark:     #4aa2a5;
+$second-color:        #1f2455;
+$second-color-light:  #6a4099;
+$warning-color:       #fdc05d;
 
-$gray-light:          #F2F2F2;
-$gray-dark:           #231F20;
+$gray-light:          #f5f5f5;
+$gray-medium:         #e8e8e8;
+$gray-darker:         #828282;
+$gray-dark:           #231f20;
 
 $text-color:          $gray-dark;
 
 $font-family:         -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-$font-size:           14px;
+
+$font-smallest:       9pt; //12px
+$font-small:          10.5pt; //14px
+$font-medium:         12pt; //16px
+$font-larger:         18pt; //24px
+$font-large:          22pt; //30px
+$font-largest:        30pt; //40px
+
 $line-height:         1.4;
 
-$screen-xs:           320px;
+$screen-xs:           360px;
 $screen-sm:           768px;
 $screen-lg:           1280px;

@@ -1,26 +1,161 @@
 .page-header {
-  position: relative;
-  display: block;
-  height: 50px;
   background-color: #fff;
-  overflow: hidden;
 
   &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 50px;
+    overflow: hidden;
+    padding-left: 6.4%;
+    padding-right: 6.4%;
 
+    @media (min-width: $screen-sm) {
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  &__cart {
+    display: inline-block;
+    order: 2;
+    margin-left: 33%;
+
+    @media (min-width: $screen-sm) {
+      order: 4;
+      position: absolute;
+      right: 6.5%;
+      margin-left: 0;
+    }
+
+    @media (min-width: $screen-lg) {
+      right: 8%;
+    }
+  }
+
+  &__phone {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      order: 5;
+      position: absolute;
+      right: 1%;
+    }
+
+    @media (min-width: $screen-lg) {
+      right: 5%;
+    }
   }
 }
 
-.main-nav__list {
-  list-style-type: none;
-}
-.main-nav__item {
+.main-nav {
   display: inline-block;
+  order: 3;
 
   @media (min-width: $screen-sm) {
+    margin-left: 14%;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 42%;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    line-height: 50px;
+    padding: 0;
+  }
+
+  &__item {
     display: none;
+    font-size: $font-small;
+    font-weight: 700;
+    margin-right: 20px;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+    }
+  }
+
+  &__link {
+    color: #000;
+  }
+
+  &__toggle {
+    display: block;
+    width: 20px;
+    height: 50px;
+    background-color: #fff;
+    padding: 0;
+    border: none;
+    position: relative;
+    margin-left: 19px;
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &__toggle span,
+  &__toggle span:before,
+  &__toggle span:after {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #000;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    transition: 0.2s;
+  }
+
+  &__toggle span:before {
+    content: '';
+    transform: translateY(-5px);
+  }
+
+  &__toggle span:after {
+    content: '';
+    transform: translateY(5px);
+  }
+
+  &__toggle--active span {
+    height: 0;
+  }
+
+  &__toggle--active span:before {
+    transform: rotate(45deg);
+  }
+
+  &__toggle--active span:after {
+    transform: rotate(-45deg);
   }
 }
 
-.main-nav__toggle {
+.working-time {
+  color: $gray-darker;
+  font-size: $font-small;
+  display: none;
+  line-height: 50px;
 
+  @media (min-width: $screen-sm) {
+    display: inline-block;
+    order: 2;
+    margin-left: 4.7%;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 3%;
+  }
+}
+
+.logo img {
+  max-width: 127px;
 }

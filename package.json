@@ -5,8 +5,7 @@
   "scripts": {
     "start": "gulp",
     "test": "stylelint \"src/scss/**/*.scss\" --syntax=scss",
-    "lint-staged": "lint-staged",
-    "precommit": "lint-staged"
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.css": "stylelint",
@@ -33,6 +32,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.1",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
@@ -40,5 +41,17 @@
     "stylelint": "^9.9.0",
     "webpack": "^4.27.1",
     "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1",
+    "picturefill": "^3.0.3",
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

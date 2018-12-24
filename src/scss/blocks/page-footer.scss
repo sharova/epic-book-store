@@ -1,0 +1,69 @@
+.page-footer {
+  height: 80px;
+  background-color: #fff;
+  padding-left: 6.4%;
+  padding-right: 6.4%;
+
+  @media (min-width: $screen-sm) {
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 50px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__inner .working-time {
+    display: inline-block;
+    font-size: $font-small;
+    line-height: 30px;
+    position: absolute;
+    top: 49px;
+    left: 0;
+
+    @media (min-width: $screen-sm) {
+      top: 10px;
+      left: 120px;
+    }
+  }
+
+  &__inner .logo {
+    line-height: 30px;
+    position: absolute;
+    top: 21px;
+
+    @media (min-width: $screen-sm) {
+      line-height: 50px;
+      top: 0;
+    }
+  }
+
+  &__contacts {
+    font-size: $font-small;
+    font-weight: 700;
+    display: inline-block;
+    position: absolute;
+    top: 27px;
+    right: 0;
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  & .main-nav {
+    display: none;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

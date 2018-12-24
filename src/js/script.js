@@ -3,6 +3,9 @@ import booksData from './modules/booksData.js';
 import bookCardTemplate from './modules/bookCardTemplate.js';
 import createElement from './modules/createElement.js';
 import sendRequest from './modules/sendRequest.js';
+import $ from 'jquery';
+import slick from './modules/slick.min.js';
+
 
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
@@ -68,4 +71,31 @@ function createDataAjax() {
 
   return `https://api.do-epixx.ru/htmlpro/bookstore/books/get/${data.page}/${data.perPage}/${data.type}`
 }
+
+
+$('.slick-slider').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  arrows: true,
+  appendArrows: $('.slider'),
+  adaptiveHeight: true
+});
+
+// $('.latest__list').slick({
+//   dots: false,
+//   infinite: true,
+//   speed: 300,
+//   slidesToShow: 1,
+//   arrows: false,
+//   adaptiveHeight: true,
+//   autoplay: true,
+//   autoplaySpeed: 3000,
+//   pauseOnFocus: true
+// });
+
+$('.main-nav__toggle').on('click', function(e) {
+  $(this).toggleClass('.main-nav__toggle--active');
+});
 

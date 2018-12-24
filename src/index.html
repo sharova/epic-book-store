@@ -8,16 +8,21 @@
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  <script src="js/picturefill.min.js"></script>
 </head>
 <body>
 
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="/" class="logo"><img src="" alt="book store"></a>
+      <a href="/" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle">Главное меню</button>
+        <button class="main-nav__toggle">
+          <span></span>
+        </button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="" class="main-nav__link">книги</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">рекомендации</a></li>
@@ -25,10 +30,16 @@
         </ul>
       </nav>
 
-      <div class="page-header__icons">
-        <a href="" class="page-header__cart"></a>
-        <a href="tel:+79111234567" class="page-header__phone"></a>
-      </div>
+      <a href="" class="page-header__cart">
+        <svg width="20" height="21">
+          <use xlink:href="img/sprite.svg#icon_bascket"></use>
+        </svg>
+      </a>
+      <a href="tel:+79111234567" class="page-header__phone">
+        <svg width="16" height="16">
+          <use xlink:href="img/sprite.svg#button_phone"></use>
+        </svg>
+      </a>
 
     </div>
   </header>
@@ -36,13 +47,34 @@
   <div class="promo">
     <div class="promo__inner">
       <div class="slider">
-        <div class="slider__inner">
-          <article class="slider__item">
-            <h2 class="slider__item-title"><a href="">Новое поступлление книги "Симпсоны и их математические секреты"</a></h2>
-            <p class="slider__item-descr">Для поклонников сериала "Симпсоны" и для всех, кому интересна математика.</p>
-            <a href="" class="slider__item-more">Хочу узнать о книге больше</a>
-            <a href=""><img src="" alt="" class="slider__item-img"></a>
-          </article>
+        <div class="slider__inner slick-slider">
+
+          <div class="slider__item">
+            <h2 class="slider__item-title"><a href="">Новое поступление книги "Симпсоны и их математические секреты"</a></h2>
+            <div class="slider__item-card">
+              <p class="slider__item-descr">Для поклонников сериала "Симпсоны" и для всех, кому интересна математика.</p>
+              <a href="" class="slider__item-more">Хочу узнать о книге больше</a>
+            </div>
+            <a href="" class="slider__item-img-link"><img src="img/books_all/simpsony-i-ikh-matematicheskie-sekrety.png" alt="" class="slider__item-img"></a>
+          </div>
+
+          <div class="slider__item">
+            <h2 class="slider__item-title"><a href="">Новое поступление книги "45 татуировок менеджера"</a></h2>
+            <div class="slider__item-card">
+              <p class="slider__item-descr">Книга про правила российского руководителя</p>
+              <a href="" class="slider__item-more">Хочу узнать о книге больше</a>
+            </div>
+            <a href="" class="slider__item-img-link"><img src="img/books_all/45-tatuirovok-prodavana.png" alt="" class="slider__item-img"></a>
+          </div>
+
+          <div class="slider__item">
+            <h2 class="slider__item-title"><a href="">Узнайте, как обучать персонал с новой книгой "Пятая дисциплина"</a></h2>
+            <div class="slider__item-card">
+              <p class="slider__item-descr">Искусство и практика обучающейся организации</p>
+              <a href="" class="slider__item-more">Хочу узнать о книге больше</a>
+             </div>
+            <a href="" class="slider__item-img-link"><img src="img/books_all/pyataya-distsiplina.png" alt="" class="slider__item-img"></a>
+          </div>
         </div>
       </div>
     </div>
@@ -76,19 +108,19 @@
 
     <div class="catalog__list-wrap">
       <div class="catalog__list">
+      </div>
 
         <div class="breadcrumbs">
           <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">1</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link--active">1</a></li>
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">2</a></li>
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">3</a></li>
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">4</a></li>
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">5</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">...</a></li>
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">10</a></li>
           </ul>
         </div>
-
-      </div>
     </div>
   </section>
 
@@ -97,15 +129,27 @@
     <p class="delivery__comment">// ну почти в любое</p>
     <div class="delivery__facts-list">
       <div class="delivery__fact">
+        <svg width="50" height="40">
+          <use xlink:href="img/sprite.svg#icon_book"></use>
+        </svg>
         <p>Покупаете книги на сайте в любимом формате — бумажные, электронные или аудио.</p>
       </div>
       <div class="delivery__fact">
+        <svg width="67" height="36">
+          <use xlink:href="img/sprite.svg#icon_box"></use>
+        </svg>
         <p>Мы подарим вам «Набор читателя» и добавим в посылку.</p>
       </div>
       <div class="delivery__fact">
+        <svg width="58" height="42">
+          <use xlink:href="img/sprite.svg#icon_delivery"></use>
+        </svg>
         <p>Бесплатно доставляем заказы от 3 000  по всей России.</p>
       </div>
       <div class="delivery__fact">
+        <svg width="52" height="47">
+          <use xlink:href="img/sprite.svg#icon_map"></use>
+        </svg>
         <p>Доставка в более чем 300 городов России, по Москве и Санкт-Петербургу — бесплатно.</p>
       </div>
     </div>
@@ -151,11 +195,11 @@
 
   <footer class="page-footer">
     <div class="page-footer__inner">
-      <a href="/" class="logo"><img src="" alt="book store"></a>
+      <a href="/" class="logo"><img src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
+      <a href="" class="page-footer__contacts">контакты</a>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle">Главное меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="" class="main-nav__link">книги</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">рекомендации</a></li>
