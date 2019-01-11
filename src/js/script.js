@@ -4,7 +4,8 @@ import bookCardTemplate from './modules/bookCardTemplate.js';
 import createElement from './modules/createElement.js';
 import sendRequest from './modules/sendRequest.js';
 import $ from 'jquery';
-import slick from './modules/slick.min.js';
+import slick from '../../node_modules/slick-carousel/slick/slick.min.js';
+
 
 
 function ready(fn) {
@@ -75,27 +76,33 @@ function createDataAjax() {
 
 $('.slick-slider').slick({
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 300,
   slidesToShow: 1,
   arrows: true,
   appendArrows: $('.slider'),
+  prevArrow:'<button class="slick-prev" aria-label="Previous" type="button"></button>',
+  nextArrow:'<button class="slick-next" aria-label="Next" type="button"></button>',
   adaptiveHeight: true
 });
 
-// $('.latest__list').slick({
-//   dots: false,
-//   infinite: true,
-//   speed: 300,
-//   slidesToShow: 1,
-//   arrows: false,
-//   adaptiveHeight: true,
-//   autoplay: true,
-//   autoplaySpeed: 3000,
-//   pauseOnFocus: true
+
+
+// $('.main-nav__toggle').on('click', function(e) {
+//   $(this).toggleClass('.main-nav__toggle--active');
 // });
 
-$('.main-nav__toggle').on('click', function(e) {
-  $(this).toggleClass('.main-nav__toggle--active');
+$(document).on("click", ".product__describtion-link button", function(e) {
+    e.preventDefault();
+    if($(this).text() == "Показать полностью"){
+        $(this).text("Скрыть")
+        $('div.product__describtion-text--hidden').removeClass('product__describtion-text--hidden')
+    } else {
+        $(this).text("Показать полностью")
+        $('div:not(.product__describtion-text)').addClass('product__describtion-text--hidden')
+    };
+
+    $this.text(linkText);
 });
+
 

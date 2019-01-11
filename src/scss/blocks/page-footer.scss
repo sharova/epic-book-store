@@ -17,30 +17,30 @@
 
   &__inner {
     position: relative;
-  }
 
-  &__inner .working-time {
-    display: inline-block;
-    font-size: $font-small;
-    line-height: 30px;
-    position: absolute;
-    top: 49px;
-    left: 0;
+    & .working-time {
+      display: inline-block;
+      font-size: $font-small;
+      line-height: 30px;
+      position: absolute;
+      top: 49px;
+      left: 0;
 
-    @media (min-width: $screen-sm) {
-      top: 10px;
-      left: 120px;
+      @media (min-width: $screen-sm) {
+        top: 10px;
+        left: 120px;
+      }
     }
-  }
 
-  &__inner .logo {
-    line-height: 30px;
-    position: absolute;
-    top: 21px;
+    & .logo {
+      line-height: 30px;
+      position: absolute;
+      top: 21px;
 
-    @media (min-width: $screen-sm) {
-      line-height: 50px;
-      top: 0;
+      @media (min-width: $screen-sm) {
+        line-height: 50px;
+        top: 0;
+      }
     }
   }
 

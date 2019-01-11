@@ -6,7 +6,11 @@
 
 @import 'blocks/page-header.scss';
 
+@import 'blocks/main-nav.scss';
+
 @import 'blocks/catalog.scss';
+
+@import 'blocks/product-card-mini.scss';
 
 @import 'blocks/delivery.scss';
 
@@ -16,6 +20,20 @@
 
 @import 'blocks/promo.scss';
 
+@import 'blocks/slider.scss';
+
+@import 'blocks/paginator.scss';
+
 @import './node_modules/slick-carousel/slick/slick.scss';
 
+@import 'blocks/recommend.scss';
 
+@import 'blocks/library.scss';
+
+@import 'blocks/product.scss';
+
+@import 'blocks/social-counters.scss';
+
+@import 'blocks/contacts.scss';
+
+@import 'blocks/form.scss';

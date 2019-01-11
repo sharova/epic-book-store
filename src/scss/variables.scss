@@ -3,11 +3,26 @@ $main-color-dark:     #4aa2a5;
 $second-color:        #1f2455;
 $second-color-light:  #6a4099;
 $warning-color:       #fdc05d;
+$link-color:          #1a1ff7;
+$link-color-hover:    #6c73ff;
+$bg-color:            #0d11c4;
+$border-color:        #ef529f;
+$bg-color-second:     #ce6194;
+$bg-color-third:      #bc0d5f;
+$color-normal:        #f4d4e4;
+$color-hover:         #d7569c;
+$color-pressed:       #d72384;
 
+
+$light-light:         #fff;
 $gray-light:          #f5f5f5;
 $gray-medium:         #e8e8e8;
+$gray-stronger:       #dddddd;
+$gray-strong:         #ababab;
 $gray-darker:         #828282;
+$gray-darkest:        #3c3c3c;
 $gray-dark:           #231f20;
+$dark-dark:           #000;
 
 $text-color:          $gray-dark;
 
@@ -19,9 +34,11 @@ $font-medium:         12pt; //16px
 $font-larger:         18pt; //24px
 $font-large:          22pt; //30px
 $font-largest:        30pt; //40px
+$font-maximum:        40pt; //50px
 
 $line-height:         1.4;
 
 $screen-xs:           360px;
 $screen-sm:           768px;
 $screen-lg:           1280px;
+

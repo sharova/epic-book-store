@@ -1,0 +1,607 @@
+.recommend {
+  background-color: $gray-light;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-bottom: 50px;
+
+/* stylelint-disable*/
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "autumn"
+      "blog"
+      "kids"
+      "feedback"
+      "photos"
+      "exchange"
+      "present";
+    grid-row-gap: 15px;
+  }
+/* stylelint-enable*/
+
+  &__title {
+    font-size: $font-larger;
+    margin-top: 37px;
+    margin-bottom: 20px;
+  }
+
+  &__blog {
+    grid-area: blog;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: $light-light;
+    box-shadow: 0 0 13px 0 $gray-darker;
+    border-radius: 5px;
+
+    &-title {
+      font-weight: 700;
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    &-describtion {
+      font-size: $font-small;
+      line-height: 25px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    &-link {
+      color: $link-color;
+      font-weight: 700;
+      font-size: $font-medium;
+      line-height: 25px;
+    }
+  }
+
+  &__photos {
+    grid-area: photos;
+    border-radius: 5px;
+    height: 150px;
+    background-image: url('../../img/bg-photos.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    position: relative;
+    padding-top: 45px;
+
+    &:after {
+      background-color: $bg-color;
+      opacity: 0.58;
+      border-radius: 5px;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &-title {
+      position: absolute;
+      z-index: 2;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 30px;
+      width: 100%;
+    }
+
+    &-link {
+      font-size: $font-medium;
+      color: $light-light;
+      font-weight: 400;
+    }
+  }
+
+  &__autumn {
+    grid-area: autumn;
+    height: 150px;
+    border-radius: 5px;
+    background-image: url('../../img/bg-book.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    position: relative;
+
+    &:after {
+      background: transparent;
+      background-image: linear-gradient(to top, rgba(6, 0, 255, 0.3) 0%, rgba(39, 44, 242, 0.8) 100%);
+      border-radius: 5px;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &-title {
+      margin-top: 15px;
+      line-height: 30px;
+      position: absolute;
+      z-index: 2;
+      left: 10px;
+    }
+
+    &-link {
+      font-size: $font-medium;
+      font-weight: 700;
+      color: $light-light;
+    }
+
+    &-describtion {
+      font-size: $font-small;
+      color: $light-light;
+      line-height: 30px;
+      margin-top: 0;
+      position: absolute;
+      left: 10px;
+      top: 60px;
+      z-index: 1;
+      width: 250px;
+    }
+  }
+
+  &__feedback {
+    grid-area: feedback;
+    background-color: $light-light;
+    box-shadow: 0 0 13px 0 $gray-darker;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+
+    &-title {
+      font-weight: 700;
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    &-describtion {
+      font-size: $font-small;
+      line-height: 25px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    &-link {
+      height: 40px;
+      width: 100%;
+      background-color: $dark-dark;
+      border: 0;
+      color: $light-light;
+      font-size: $font-medium;
+      font-weight: 700;
+
+      &:hover {
+        background-color: $color-hover;
+      }
+
+      &:active {
+        background-color: $color-pressed;
+      }
+    }
+  }
+
+  &__kids {
+    grid-area: kids;
+    min-height: 150px;
+    border-radius: 4px;
+    background-color: $bg-color-second;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 3px 9px 1px rgba(64, 66, 172, 0.35);
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    &-link {
+      color: $light-light;
+      font-size: $font-medium;
+      font-weight: 700;
+    }
+
+    &-describtion {
+      color: $light-light;
+      font-size: $font-small;
+      line-height: 25px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  &__exchange {
+    grid-area: exchange;
+    min-height: 150px;
+    background-image: url('../../img/bg-exchange.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    position: relative;
+    border-radius: 4px;
+
+    &:after {
+      background-color: $bg-color-third;
+      opacity: 0.8;
+      border-radius: 5px;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &-title {
+      z-index: 4;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      margin: 0;
+    }
+
+    &-link {
+      font-size: $font-medium;
+      color: $light-light;
+      font-weight: 700;
+    }
+
+    &-describtion {
+      font-size: $font-small;
+      color: $light-light;
+      font-weight: 400;
+      line-height: 25px;
+      z-index: 3;
+      position: absolute;
+      top: 70px;
+      left: 10px;
+      margin: 0;
+    }
+  }
+
+  &__present {
+    grid-area: present;
+    padding-top: 15px;
+    padding-left: 25px;
+
+    &-title {
+      font-weight: 700;
+      font-size: $font-larger;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    &-describtion {
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 28px;
+    }
+  }
+
+  //768 px
+
+  @media (min-width: $screen-sm) {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 100px;
+
+    &__title {
+      font-size: $font-largest;
+      font-weight: 700;
+      margin-top: 50px;
+      margin-bottom: 40px;
+    }
+
+/* stylelint-disable*/
+    &__inner {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 170px 230px 230px 230px 170px 170px;
+      grid-template-areas:
+        "autumn autumn"
+        "blog present"
+        "kids present"
+        "feedback present"
+        "photos photos"
+        "exchange exchange";
+      grid-gap: 11px;
+    }
+/* stylelint-enable*/
+
+    &__blog {
+      padding-top: 35px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      &-title {
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      &-describtion {
+        font-size: $font-medium;
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      &-link {
+        line-height: 30px;
+      }
+    }
+
+    &__photos {
+      height: 170px;
+      padding-top: 0;
+
+      &-title {
+        line-height: 170px;
+      }
+
+      &-link {
+        font-size: $font-larger;
+      }
+    }
+
+    &__autumn {
+      height: 170px;
+
+      &-title {
+        margin-top: 40px;
+        line-height: 30px;
+        margin-bottom: 22px;
+        position: absolute;
+        left: 40%;
+      }
+
+      &-link {
+        font-size: $font-larger;
+        font-weight: 400;
+      }
+
+      &-describtion {
+        font-size: $font-medium;
+        width: 100%;
+        line-height: 30px;
+        margin-top: 0;
+        position: absolute;
+        left: 30%;
+        top: 85px;
+      }
+    }
+
+    &__feedback {
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+
+      &-title {
+        margin-bottom: 15px;
+      }
+
+      &-describtion {
+        font-size: $font-medium;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+
+      &-link {
+        height: 50px;
+      }
+    }
+
+    &__kids {
+      padding-top: 35px;
+      padding-left: 30px;
+      padding-right: 30px;
+
+      &-title {
+        margin-bottom: 20px;
+      }
+
+      &-describtion {
+        font-size: $font-medium;
+        line-height: 30px;
+      }
+    }
+
+    &__exchange {
+      height: 170px;
+
+
+      &-title {
+        top: 67px;
+        left: 33%;
+      }
+
+      &-link {
+        font-size: $font-larger;
+        font-weight: 400;
+      }
+
+      &-describtion {
+        font-size: $font-medium;
+        line-height: 30px;
+        top: 104px;
+        left: 31%;
+      }
+    }
+
+    &__present {
+      grid-area: present;
+      padding-top: 30px;
+      padding-left: 50px;
+
+      &-title {
+        font-weight: 700;
+        font-size: $font-medium;
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      &-describtion {
+        font-size: $font-medium;
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 28px;
+        width: 300px;
+      }
+    }
+  }
+
+  //1280 px
+
+  @media (min-width: $screen-lg) {
+    padding-right: 59px;
+    padding-left: 40px;
+    padding-bottom: 137px;
+
+    &__title {
+      font-size: $font-maximum;
+      line-height: 70px;
+      margin-top: 74px;
+      margin-left: 22px;
+      margin-bottom: 47px;
+    }
+
+/* stylelint-disable*/
+    &__inner {
+      grid-template-columns: 300px 285px 285px 1fr;
+      grid-template-rows: 170px 170px 179px 170px;
+      grid-template-areas:
+        "blog autumn autumn present"
+        "photos autumn autumn present"
+        "photos feedback kids present"
+        "exchange exchange exchange present";
+    }
+/* stylelint-enable*/
+
+    &__blog {
+      padding-top: 20px;
+      padding-left: 23px;
+      padding-right: 23px;
+
+      &-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      &-describtion {
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__photos {
+      height: 360px;
+
+      &-title {
+        top: 125px;
+        left: 35px;
+        margin: 0;
+        width: 230px;
+        line-height: 30px;
+      }
+
+      &-link {
+        font-size: $font-larger;
+      }
+    }
+
+    &__autumn {
+      height: 350px;
+
+      &-title {
+        margin-top: 30px;
+        line-height: 30px;
+        margin-bottom: 22px;
+        left: 35%;
+      }
+
+      &-describtion {
+        margin-top: 0;
+        left: 19%;
+        top: 69px;
+      }
+    }
+
+    &__feedback {
+      padding-top: 20px;
+      padding-left: 12px;
+      padding-right: 15px;
+
+
+      &-title {
+        margin-bottom: 8px;
+      }
+
+      &-describtion {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__kids {
+      padding-top: 20px;
+      padding-left: 17px;
+      padding-right: 10px;
+
+      &-title {
+        margin-bottom: 15px;
+      }
+    }
+
+    &__exchange {
+
+      &-title {
+        top: 67px;
+        left: 33%;
+      }
+
+      &-describtion {
+        top: 104px;
+        left: 31%;
+      }
+    }
+
+    &__present {
+      grid-area: present;
+      padding-top: 30px;
+      padding-left: 20px;
+
+      &-title {
+        font-weight: 700;
+        font-size: $font-medium;
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      &-describtion {
+        font-size: $font-medium;
+        line-height: 30px;
+        margin-top: 0;
+        margin-bottom: 28px;
+      }
+    }
+  }
+}

@@ -4,30 +4,41 @@
   <meta charset="UTF-8">
   <title>Документ</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script>
+ <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  <script src="js/picturefill.min.js"></script>
 </head>
 <body>
 
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="/" class="logo"><img src="" alt="book store"></a>
+      <a href="/" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle">Главное меню</button>
+        <button class="main-nav__toggle">
+          <span></span>
+        </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="" class="main-nav__link">книги</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">рекомендации</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">контакты</a></li>
+          <li class="main-nav__item"><a href="inner.html" class="main-nav__link main-nav__link--active">книги</a></li>
+          <li class="main-nav__item"><a href="recommendations.html" class="main-nav__link">рекомендации</a></li>
+          <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">контакты</a></li>
         </ul>
       </nav>
 
-      <div class="page-header__icons">
-        <a href="" class="page-header__cart"></a>
-        <a href="tel:+79111234567" class="page-header__phone"></a>
-      </div>
+      <a href="" class="page-header__cart">
+        <svg width="20" height="21">
+          <use xlink:href="img/sprite.svg#icon_cart"></use>
+        </svg>
+      </a>
+      <a href="tel:+79111234567" class="page-header__phone">
+        <svg width="16" height="16">
+          <use xlink:href="img/sprite.svg#icon_phone"></use>
+        </svg>
+      </a>
 
     </div>
   </header>
@@ -40,12 +51,12 @@
       <p class="product__slogan">Кто это и почему они так важны для вашего бизнеса</p>
     </div>
 
-    <div class="product__image-wrap"><img src="" alt="" class="product__image"></div>
+    <div class="product__image-wrap"><img src="img/books_all/superpotrebiteli.png" alt="" class="product__image"></div>
 
     <div class="product__preview-wrap">
-      <a href="" class="product__preview-link"><img src="" alt="" class="product__preview"></a>
-      <a href="" class="product__preview-link"><img src="" alt="" class="product__preview"></a>
-      <a href="" class="product__preview-link"><img src="" alt="" class="product__preview"></a>
+      <a target="_blank" href="img/preview.png" class="product__preview-link"><img src="img/preview.png" alt="" class="product__preview"></a>
+      <a target="_blank" href="img/preview.png" class="product__preview-link"><img src="img/preview.png" alt="" class="product__preview"></a>
+      <a target="_blank" href="img/preview.png" class="product__preview-link"><img src="img/preview.png" alt="" class="product__preview"></a>
     </div>
 
     <div class="product__details-wrap">
@@ -69,12 +80,12 @@
       </table>
 
       <form action="" class="product__details-form">
-        <div class="field-text">
+        <div class="product__details-field-text">
           <input type="text" class="field-text__input" value="1">
           <span class="field-text__describtion">шт.</span>
         </div>
-        <div class="field-action">
-          <button class="btn">Добавить в корзину</button>
+        <div class="product__details-field-action">
+          <button class="btn inner-btn">Добавить в корзину</button>
         </div>
       </form>
 
@@ -86,28 +97,36 @@
       <div class="product__describtion-text">
         <p>В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.</p>
         <p>Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.</p>
-
+      </div>
         <button class="product__describtion-link">Показать полностью</button>
-
+      <div class="product__describtion-text--hidden">
         <p>В отличие от обычных покупателей суперпотребители очень заинтересованы в ваших товарах, а возможно, даже слегка помешаны на них.</p>
         <p>Они знают о кроссовках всё и имеют десятки пар. Они спортивные фанаты c копиями футболок любимой команды, а стены их гаражей украшены подписанной символикой.</p>
       </div>
 
       <div class="product__describtion-social social-counters">
         <button class="social-counters_item">
-          <svg class="social-counters__icon"></svg>
+          <svg width="20" height="20">
+            <use xlink:href="img/sprite.svg#icon_facebook"></use>
+          </svg>
           <span class="social-counters__icon-num">15</span>
         </button>
         <button class="social-counters_item">
-          <svg class="social-counters__icon"></svg>
+          <svg width="20" height="20" class="social-counters__icon">
+            <use xlink:href="img/sprite.svg#icon_vk"></use>
+          </svg>
           <span class="social-counters__icon-num">4</span>
         </button>
         <button class="social-counters_item">
-          <svg class="social-counters__icon"></svg>
+          <svg width="20" height="20" class="social-counters__icon">
+            <use xlink:href="img/sprite.svg#icon_thumbs_up"></use>
+          </svg>
           <span class="social-counters__icon-num">160</span>
         </button>
         <button class="social-counters_item">
-          <svg class="social-counters__icon"></svg>
+          <svg width="20" height="20" class="social-counters__icon">
+            <use xlink:href="img/sprite.svg#icon_thumbs_down"></use>
+          </svg>
           <span class="social-counters__icon-num">0</span>
         </button>
       </div>
@@ -118,8 +137,8 @@
   <section class="latest">
 
     <div class="latest__inner">
-      <h2 class="latest__title">Книги по тематике</h2>
-      <span class="latest__all">Больше книг по теме</span>
+      <h2 class="latest__title">Наши новинки</h2>
+      <span class="latest__all"><a href="">Все новинки</a></span>
     </div>
 
     <div class="latest__list-wrap">
@@ -127,25 +146,25 @@
 
         <article class="product-card-mini">
           <h2 class="product-card-mini__title"><a href="">Латеральная логика</a></h2>
-          <a href="" class="product-card-mini__img-wrap"><img src="" alt="" class="product-card-mini__img"></a>
+          <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-lateralnaya-logika.jpg" alt="" class="product-card-mini__img"></a>
           <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
         </article>
 
         <article class="product-card-mini">
           <h2 class="product-card-mini__title"><a href="">Путеводитель по лжи</a></h2>
-          <a href="" class="product-card-mini__img-wrap"><img src="" alt="" class="product-card-mini__img"></a>
+          <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-putevoditel-po-lzhi.jpg" alt="" class="product-card-mini__img"></a>
           <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
         </article>
 
         <article class="product-card-mini">
           <h2 class="product-card-mini__title"><a href="">Дао физики</a></h2>
-          <a href="" class="product-card-mini__img-wrap"><img src="" alt="" class="product-card-mini__img"></a>
+          <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-dao-fiziki.jpg" alt="" class="product-card-mini__img"></a>
           <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
         </article>
 
         <article class="product-card-mini">
           <h2 class="product-card-mini__title"><a href="">Не очевидно</a></h2>
-          <a href="" class="product-card-mini__img-wrap"><img src="" alt="" class="product-card-mini__img"></a>
+          <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-ne-ochevidno.jpg" alt="" class="product-card-mini__img"></a>
           <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
         </article>
 
@@ -155,6 +174,9 @@
 
   <div class="library">
     <div class="library__inner">
+      <svg width="99" height="10">
+        <use xlink:href="img/sprite.svg#shape"></use>
+      </svg>
       <h2 class="library__title">Мы открыли для вас уютную библиотеку</h2>
       <div class="library__describtion">
         <p>Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
@@ -165,13 +187,13 @@
 
   <footer class="page-footer">
     <div class="page-footer__inner">
-      <a href="/" class="logo"><img src="" alt="book store"></a>
+      <a href="/" class="logo"><img src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
+      <a href="" class="page-footer__contacts">контакты</a>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle">Главное меню</button>
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="" class="main-nav__link">книги</a></li>
+          <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link--active">книги</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">рекомендации</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">контакты</a></li>
         </ul>

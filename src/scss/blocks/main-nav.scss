@@ -1,0 +1,92 @@
+.main-nav {
+  display: inline-block;
+  order: 3;
+
+  @media (min-width: $screen-sm) {
+    margin-left: 14%;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 42%;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    line-height: 50px;
+    padding: 0;
+  }
+
+  &__item {
+    display: none;
+    font-size: $font-small;
+    font-weight: 700;
+    margin-right: 20px;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+    }
+  }
+
+  &__link {
+    color: $dark-dark;
+
+    &:hover {
+      color: $link-color;
+    }
+
+    &--active {
+      color: $color-hover;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    width: 20px;
+    height: 50px;
+    background-color: $light-light;
+    padding: 0;
+    border: none;
+    position: relative;
+    margin-left: 19px;
+
+    @media (min-width: $screen-sm) {
+      display: none;
+    }
+
+    & span,
+    & span:before,
+    & span:after {
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: $dark-dark;
+      left: 0;
+      top: 50%;
+      margin-top: -1px;
+      transition: 0.2s;
+    }
+
+    & span:before {
+      content: '';
+      transform: translateY(-5px);
+    }
+
+    & span:after {
+      content: '';
+      transform: translateY(5px);
+    }
+
+    &--active span {
+      height: 0;
+    }
+
+    &--active span:before {
+      transform: rotate(45deg);
+    }
+
+    &--active span:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
