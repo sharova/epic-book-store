@@ -10,12 +10,15 @@
     min-height: 550px;
   }
 
-  &:hover &__img-wrap img {
-    box-shadow: 0 12px 33px 5px $color-normal;
-  }
+  @media (min-width: $screen-lg) {
 
-  &:hover &__price {
-    color: $border-color;
+    &:hover &__img-wrap img {
+      box-shadow: 0 12px 33px 5px $color-normal;
+    }
+
+    &:hover &__price {
+      color: $border-color;
+    }
   }
 
   &__img-wrap img {

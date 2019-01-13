@@ -151,12 +151,14 @@
 
       @media (min-width: $screen-lg) {
         height: 149px;
-      }
-
-      &:hover {
-        background-color: $gray-dark;
-        opacity: 0.7;
-        cursor: url('img/cursor_plus.png'), pointer;
+       /* stylelint-disable*/
+        &:hover {
+          background-color: $gray-dark;
+          opacity: 0.7;
+          cursor:  pointer;
+          cursor: url('../../img/cursor_plus.png') 2 2, pointer;
+        /* stylelint-enable*/
+        }
       }
     }
   }

@@ -33,8 +33,11 @@
     display: inline-block;
     border-radius: 50%;
 
-    &:hover {
-      background-color: $color-normal;
+    @media (min-width: $screen-lg) {
+
+      &:hover {
+        background-color: $color-normal;
+      }
     }
 
     &--active {

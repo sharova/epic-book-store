@@ -26,9 +26,7 @@
     order: 2;
     margin-left: 33%;
 
-    & svg:hover {
-      fill: $link-color;
-    }
+
 
     @media (min-width: $screen-sm) {
       order: 4;
@@ -39,6 +37,10 @@
 
     @media (min-width: $screen-lg) {
       right: 8%;
+
+      & svg:hover {
+        fill: $link-color;
+      }
     }
   }
 
@@ -57,8 +59,6 @@
     }
   }
 }
-
-
 
 .working-time {
   color: $gray-darker;

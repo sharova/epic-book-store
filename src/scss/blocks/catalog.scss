@@ -13,7 +13,6 @@
     height: 65px;
     display: block;
     padding-left: 6.4%;
-    overflow: hidden;
     margin-bottom: 30px;
 
     @media (min-width: $screen-sm) {
@@ -33,6 +32,13 @@
     line-height: 50px;
     margin-top: 10px;
     padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    @media (min-width: $screen-sm) {
+      overflow-x: visible;
+      white-space: normal;
+    }
   }
 
   &__tab-item {
@@ -49,14 +55,17 @@
     font-size: $font-medium;
     color: $dark-dark;
 
-    &:hover {
-      color: $link-color;
-    }
+    @media (min-width: $screen-lg) {
 
-    &:focus {
-      padding-bottom: 19px;
-      color: $link-color;
-      border-bottom: 2px solid $border-color;
+      &:hover {
+        color: $link-color;
+      }
+
+      &:focus {
+        padding-bottom: 19px;
+        color: $link-color;
+        border-bottom: 2px solid $border-color;
+      }
     }
   }
 

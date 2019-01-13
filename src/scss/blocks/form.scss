@@ -94,7 +94,7 @@
       margin-bottom: 46px;
       font-family: 'Montserrat';
       font-size: $font-medium;
-/* stylelint-enable*/
+
 
       @media (min-width: $screen-sm) {
         width: 330px;
@@ -103,20 +103,19 @@
 
       @media (min-width: $screen-lg) {
         width: 360px;
-      }
 
-      &:hover {
-        border-bottom: solid 4px $color-normal;
-      }
+        &:hover {
+          border-bottom: solid 4px $color-normal;
+        }
 
-      &:focus {
-        border-bottom: solid 4px $color-hover;
+        &:focus {
+          border-bottom: solid 4px $color-hover;
+        }
       }
     }
+    /* stylelint-enable*/
   }
 }
-
-
 
 .field-checkbox {
 
@@ -198,13 +197,7 @@
   font-weight: 700;
   margin-top: 29px;
 
-  &:hover {
-    background-color: $color-hover;
-  }
 
-  &:active {
-    background-color: $color-pressed;
-  }
 
   @media (min-width: $screen-sm) {
     width: 331px;
@@ -217,19 +210,21 @@
     right: 40px;
     margin-top: 0;
     top: 171px;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+
+    &:active {
+      background-color: $color-pressed;
+    }
   }
 }
 
-// @media (min-width: $screen-sm) {
-// }
-// @media (min-width: $screen-lg) {
-// }
-// &:hover {
+#email-error {
+  color: $color-error;
+}
 
-//     }
-
-//     &:active {
-
-//     }
-
-
+#agreement-error {
+  color: $color-error;
+}

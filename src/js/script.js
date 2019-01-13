@@ -5,6 +5,8 @@ import createElement from './modules/createElement.js';
 import sendRequest from './modules/sendRequest.js';
 import $ from 'jquery';
 import slick from '../../node_modules/slick-carousel/slick/slick.min.js';
+import validate from '../../node_modules/jquery-validation/dist/jquery.validate.js';
+
 
 
 
@@ -41,26 +43,30 @@ if (wrap) {
 
 // Вешаем слушателя на табы
 const tabsWrap = document.querySelector('.j-tabs');
-const tabsArray = Array.from(tabsWrap.children);
 
-tabsArray.forEach(function(tab) {
-  const link = tab.firstElementChild;
+if (tabsWrap) {
+  const tabsArray = Array.prototype.slice.call(tabsWrap.children);
 
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    data.type = event.target.dataset.type;
+  tabsArray.forEach(function(tab) {
+    const link = tab.firstElementChild;
 
-    const dataAjax = createDataAjax();
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      data.type = event.target.dataset.type;
 
-    sendRequest(dataAjax, function(responseObj) {
-      if (wrap.children) {
-      wrap.innerHTML = '';
-      }
+      const dataAjax = createDataAjax();
 
-    addPage(responseObj.items, bookCardTemplate);
+      sendRequest(dataAjax, function(responseObj) {
+        if (wrap.children) {
+        wrap.innerHTML = '';
+        }
+
+      addPage(responseObj.items, bookCardTemplate);
+      });
     });
   });
-});
+}
+
 
 //Функция подготовки URL для GET запроса
 function createDataAjax() {
@@ -73,7 +79,10 @@ function createDataAjax() {
   return `https://api.do-epixx.ru/htmlpro/bookstore/books/get/${data.page}/${data.perPage}/${data.type}`
 }
 
+const test = $('.slick-slider');
+console.log(test);
 
+//Подключение слайдера на главной
 $('.slick-slider').slick({
   dots: false,
   infinite: false,
@@ -88,21 +97,48 @@ $('.slick-slider').slick({
 
 
 
+//Валидация формы контактов
+$(function(){
+  $('.form').validate( {
+    rules: {
+      email: {
+        required: true,
+        minlength: 6,
+        email: true
+      },
+      agreement: {
+        required: true,
+        checkbox: true
+      }
+    },
+    messages: {
+      email: {
+        required: "Вы не ввели почту",
+        email: "Почта должна быть в формате name@domain.com"
+      },
+      agreement: {
+        required: "Нужно согласиться с условиями, поставив галочку"
+      }
+    }
+  });
+});
+
+
 // $('.main-nav__toggle').on('click', function(e) {
 //   $(this).toggleClass('.main-nav__toggle--active');
 // });
 
-$(document).on("click", ".product__describtion-link button", function(e) {
-    e.preventDefault();
-    if($(this).text() == "Показать полностью"){
-        $(this).text("Скрыть")
-        $('div.product__describtion-text--hidden').removeClass('product__describtion-text--hidden')
-    } else {
-        $(this).text("Показать полностью")
-        $('div:not(.product__describtion-text)').addClass('product__describtion-text--hidden')
-    };
+// $(document).on("click", ".product__describtion-link button", function(e) {
+//     e.preventDefault();
+//     if($(this).text() == "Показать полностью"){
+//         $(this).text("Скрыть")
+//         $('div.product__describtion-text--hidden').removeClass('product__describtion-text--hidden')
+//     } else {
+//         $(this).text("Показать полностью")
+//         $('div:not(.product__describtion-text)').addClass('product__describtion-text--hidden')
+//     };
 
-    $this.text(linkText);
-});
+//     $this.text(linkText);
+// });
 
 

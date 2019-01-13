@@ -43,19 +43,24 @@
     color: $link-color;
     font-size: $font-medium;
 
-    &:hover {
-      color: $link-color-hover;
-    }
 
-    &:active {
-      color: $bg-color;
-    }
 
     @media (min-width: $screen-sm) {
       position: absolute;
       display: inline-block;
       right: 0;
       line-height: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
+
+      &:hover {
+        color: $link-color-hover;
+      }
+
+      &:active {
+        color: $bg-color;
+      }
     }
   }
 

@@ -32,7 +32,10 @@
     color: $dark-dark;
 
     &:hover {
-      color: $link-color;
+
+      @media (min-width: $screen-lg) {
+        color: $link-color;
+      }
     }
 
     &--active {
