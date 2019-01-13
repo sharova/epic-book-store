@@ -204,7 +204,7 @@
         left: 282px;
       }
 
-      &__input {
+      & input {
         width: 80px;
         height: 50px;
         border-radius: 2px;
@@ -214,11 +214,11 @@
         font-size: $font-medium;
       }
 
-      &__input:hover {
+      & input:hover {
         background-color: $gray-medium;
       }
 
-      &__input:focus {
+      & input:focus {
         background-color: $gray-medium;
         border: 2px solid $gray-stronger;
         outline: none;

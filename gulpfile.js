@@ -23,7 +23,6 @@ const path = require('path');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 
-
 function styles() {
   return src(`${dir.src}scss/style.scss`)
     .pipe(plumber())
