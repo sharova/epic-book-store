@@ -24,20 +24,20 @@
           <span></span>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="" class="main-nav__link">книги</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">рекомендации</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">контакты</a></li>
+          <li class="main-nav__item"><a href="inner.html" class="main-nav__link">книги</a></li>
+          <li class="main-nav__item"><a href="recommendations.html" class="main-nav__link">рекомендации</a></li>
+          <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">контакты</a></li>
         </ul>
       </nav>
 
       <a href="" class="page-header__cart">
         <svg width="20" height="21">
-          <use xlink:href="img/sprite.svg#icon_bascket"></use>
+          <use xlink:href="img/sprite.svg#icon_cart"></use>
         </svg>
       </a>
       <a href="tel:+79111234567" class="page-header__phone">
         <svg width="16" height="16">
-          <use xlink:href="img/sprite.svg#button_phone"></use>
+          <use xlink:href="img/sprite.svg#icon_phone"></use>
         </svg>
       </a>
 
@@ -85,7 +85,7 @@
 
     <div class="catalog__tabs-wrap">
       <ul class="catalog__tabs j-tabs">
-        <li class="catalog__tab-item">
+        <li class="catalog__tab-item catalog__tab-item--active">
           <a href="#" data-type="" class="catalog__tab-link">Все</a>
         </li>
         <li class="catalog__tab-item">
@@ -110,15 +110,15 @@
       <div class="catalog__list">
       </div>
 
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link breadcrumbs__link--active">1</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">2</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">3</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">4</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">5</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">...</a></li>
-            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">10</a></li>
+        <div class="paginator">
+          <ul class="paginator__list">
+            <li class="paginator__item"><a href="" class="paginator__link paginator__link--active">1</a></li>
+            <li class="paginator__item"><a href="" class="paginator__link">2</a></li>
+            <li class="paginator__item"><a href="" class="paginator__link">3</a></li>
+            <li class="paginator__item"><a href="" class="paginator__link">4</a></li>
+            <li class="paginator__item"><a href="" class="paginator__link">5</a></li>
+            <li class="paginator__item"><a href="" class="paginator__link">...</a></li>
+            <li class="paginator__item"><a href="" class="paginator__link">10</a></li>
           </ul>
         </div>
     </div>
@@ -159,7 +159,7 @@
 
     <div class="latest__inner">
       <h2 class="latest__title">Наши новинки</h2>
-      <span class="latest__all">Все новинки</span>
+      <span class="latest__all"> <a href="">Все новинки</a></span>
     </div>
 
     <div class="latest__list-wrap">
@@ -209,6 +209,6 @@
     </div>
   </footer>
 
-  <script type="module" src="./js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
