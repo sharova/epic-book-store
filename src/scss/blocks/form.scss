@@ -41,6 +41,7 @@
     padding-left: 20px;
     padding-right: 21px;
     padding-bottom: 91px;
+    position: relative;
 
     @media (min-width: $screen-sm) {
       padding-top: 70px;
@@ -95,6 +96,9 @@
       font-family: 'Montserrat';
       font-size: $font-medium;
 
+      &.error {
+        border-bottom: solid 4px $color-error;
+      }
 
       @media (min-width: $screen-sm) {
         width: 330px;
@@ -116,6 +120,8 @@
     /* stylelint-enable*/
   }
 }
+
+
 
 .field-checkbox {
 
@@ -223,8 +229,18 @@
 
 #email-error {
   color: $color-error;
+  position: absolute;
+  left: 30px;
+  top: 170px;
 }
 
 #agreement-error {
   color: $color-error;
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+}
+
+#agreement-error ~ .checkmark {
+  border: 4px solid $color-error;
 }

@@ -70,23 +70,12 @@
     display: flex;
     overflow-x: auto;
 
-    @media (min-width: $screen-lg) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 35px;
-    }
-
-
     & article {
       min-width: 220px;
       margin-right: 40px;
 
       @media (min-width: $screen-sm) {
         margin-bottom: 0;
-      }
-
-      @media (min-width: $screen-lg) {
-        margin: 0;
       }
     }
   }

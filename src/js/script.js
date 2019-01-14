@@ -6,7 +6,7 @@ import sendRequest from './modules/sendRequest.js';
 import $ from 'jquery';
 import slick from '../../node_modules/slick-carousel/slick/slick.min.js';
 import validate from '../../node_modules/jquery-validation/dist/jquery.validate.js';
-
+import magnificPopup from '../../node_modules/magnific-popup/dist/jquery.magnific-popup.js';
 
 
 
@@ -124,9 +124,6 @@ $(function(){
 });
 
 
-// $('.main-nav__toggle').on('click', function(e) {
-//   $(this).toggleClass('.main-nav__toggle--active');
-// });
 
 // $(document).on("click", ".product__describtion-link button", function(e) {
 //     e.preventDefault();
@@ -141,4 +138,23 @@ $(function(){
 //     $this.text(linkText);
 // });
 
-
+//magnific-popup-product preview
+$(document).ready(function() {
+  $('.product__preview-wrap').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('title') + '<small>epic-book-store</small>';
+      }
+    }
+  });
+});

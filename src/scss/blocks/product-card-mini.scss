@@ -3,14 +3,18 @@
   display: flex;
   flex-direction: column;
   align-content: flex-start;
+  margin-bottom: 40px;
 
 
   @media (min-width: $screen-sm) {
     width: 260px;
     min-height: 550px;
+    margin-right: 80px;
   }
 
   @media (min-width: $screen-lg) {
+
+    margin-right: 40px;
 
     &:hover &__img-wrap img {
       box-shadow: 0 12px 33px 5px $color-normal;
@@ -71,5 +75,6 @@
     color: $dark-dark;
     order: 4;
     margin-bottom: 9px;
+    margin-top: auto;
   }
 }

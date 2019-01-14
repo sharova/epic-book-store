@@ -14,15 +14,18 @@
     display: block;
     padding-left: 6.4%;
     margin-bottom: 30px;
+    overflow-x: auto;
 
     @media (min-width: $screen-sm) {
       margin-bottom: 38px;
       padding-left: 7%;
+      overflow-x: visible;
     }
 
     @media (min-width: $screen-lg) {
       margin-bottom: 41px;
       padding-left: 12.5%;
+      overflow-x: visible;
     }
   }
 
@@ -75,23 +78,18 @@
   }
 
   &__list {
-    display: grid;
-    padding-left: 30px;
-    padding-right: 30px;
-    grid-gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-left: 29px;
 
     @media (min-width: $screen-sm) {
-      padding-left: 74px;
-      padding-right: 74px;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 61px;
+      display: inline-flex;
+      padding-left: 70px;
     }
 
     @media (min-width: $screen-lg) {
       padding-left: 60px;
-      padding-right: 60px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 40px;
     }
   }
 }
