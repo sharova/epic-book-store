@@ -1,16 +1,11 @@
 .latest {
   min-height: 650px;
-  padding-left: 6.5%;
+  padding-left: 30px;
   background-image: linear-gradient($gray-light 35%, #f4d4e4 35%);
 
-  @media (min-width: $screen-sm) {
-    padding-left: 1%;
-    padding-right: 1%;
-  }
 
-  @media (min-width: $screen-lg) {
-    padding-left: 60px;
-    padding-right: 60px;
+  @media (min-width: $screen-sm) {
+    padding-left: 0;
   }
 
   &__inner {
@@ -20,8 +15,14 @@
     margin-bottom: 40px;
 
     @media (min-width: $screen-sm) {
-      margin-bottom: 50px;
       height: 50px;
+      width: 750px;
+      margin: 40px auto;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 1160px;
+      margin: 50px auto;
     }
   }
 
@@ -65,17 +66,39 @@
   }
 
   &__list {
-    min-width: 100%;
+    width: 100%;
     min-height: 534px;
     display: flex;
     overflow-x: auto;
 
+    @media (min-width: $screen-lg) {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    &-wrap {
+
+      @media (min-width: $screen-lg) {
+        width: 1160px;
+        margin: 0 auto;
+      }
+    }
+
     & article {
-      min-width: 220px;
+      width: 220px;
       margin-right: 40px;
 
       @media (min-width: $screen-sm) {
+        width: 260px;
         margin-bottom: 0;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+
+      @media (min-width: $screen-lg) {
+
+        margin-right: 20px;
+        margin-left: 20px;
       }
     }
   }

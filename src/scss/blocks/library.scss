@@ -1,7 +1,7 @@
 .library {
   height: 311px;
   width: 100%;
-  background-image: url('../../img/library.jpg');
+  background-image: url('../img/library.jpg');
   position: relative;
 
   &:after {
@@ -30,7 +30,6 @@
     color: $light-light;
     font-size: $font-larger;
     font-weight: 700;
-    text-align: center;
     line-height: 40px;
     margin-top: 30px;
     margin-bottom: 23px;

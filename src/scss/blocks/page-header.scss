@@ -3,40 +3,38 @@
 
   &__inner {
     display: flex;
+    width: 300px;
+    margin: 0 auto;
     align-items: center;
     flex-direction: row;
-    height: 50px;
+    min-height: 50px;
     overflow: hidden;
-    padding-left: 6.4%;
-    padding-right: 6.4%;
 
     @media (min-width: $screen-sm) {
-      padding-left: 1%;
-      padding-right: 1%;
+      width: 760px;
+      justify-content: space-between;
     }
 
     @media (min-width: $screen-lg) {
-      padding-left: 5%;
-      padding-right: 5%;
+      width: 1160px;
     }
   }
 
   &__cart {
     display: inline-block;
     order: 2;
-    margin-left: 33%;
-
+    margin-left: 100px;
 
 
     @media (min-width: $screen-sm) {
       order: 4;
-      position: absolute;
-      right: 6.5%;
+      // position: absolute;
+      // right: 6.5%;
       margin-left: 0;
     }
 
     @media (min-width: $screen-lg) {
-      right: 8%;
+      // right: 8%;
 
       & svg:hover {
         fill: $link-color;
@@ -50,12 +48,13 @@
     @media (min-width: $screen-sm) {
       display: inline-block;
       order: 5;
-      position: absolute;
-      right: 1%;
+      flex: 0 0 auto;
+      // position: absolute;
+      // right: 1%;
     }
 
     @media (min-width: $screen-lg) {
-      right: 5%;
+      // right: 5%;
     }
   }
 }

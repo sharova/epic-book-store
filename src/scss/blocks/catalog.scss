@@ -10,7 +10,6 @@
 
   &__tabs-wrap {
     background: linear-gradient(to bottom, $gray-medium 80%, $gray-light 80%);
-    height: 65px;
     display: block;
     padding-left: 6.4%;
     margin-bottom: 30px;
@@ -18,45 +17,55 @@
 
     @media (min-width: $screen-sm) {
       margin-bottom: 38px;
-      padding-left: 7%;
+      padding-left: 0;
       overflow-x: visible;
     }
 
     @media (min-width: $screen-lg) {
       margin-bottom: 41px;
-      padding-left: 12.5%;
       overflow-x: visible;
     }
   }
 
   &__tabs {
     list-style-type: none;
-    display: inline-block;
+    height: 50px;
     line-height: 50px;
-    margin-top: 10px;
     padding: 0;
     overflow-x: auto;
     white-space: nowrap;
+    margin-top: 10px;
+    margin-bottom: 0;
 
     @media (min-width: $screen-sm) {
       overflow-x: visible;
       white-space: normal;
+      margin: 0 auto;
+      width: 760px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-left: 150px;
     }
   }
 
   &__tab-item {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
 
 
     @media (min-width: $screen-sm) {
-      margin-right: 42px;
+      margin-right: 25px;
+      margin-left: 25px;
     }
   }
 
   &__tab-link {
     font-size: $font-medium;
     color: $dark-dark;
+    height: 50px;
+    display: block;
 
     @media (min-width: $screen-lg) {
 
@@ -78,18 +87,31 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding-left: 29px;
+
 
     @media (min-width: $screen-sm) {
-      display: inline-flex;
-      padding-left: 70px;
+      margin-left: -45px;
+      margin-right: -45px;
     }
 
     @media (min-width: $screen-lg) {
-      padding-left: 60px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    &-wrap {
+
+      width: 231px;
+      margin: 0 auto;
+
+      @media (min-width: $screen-sm) {
+        width: 610px;
+      }
+
+
+      @media (min-width: $screen-lg) {
+        width: 1160px;
+      }
     }
   }
 }

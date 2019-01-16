@@ -1,6 +1,19 @@
 .slider {
 
-  &__item-title {
+  &__inner {
+    width: 300px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm) {
+      width: 760px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 1160px;
+    }
+  }
+
+  &__item-descr {
     width: 281px;
     font-size: $font-small;
     line-height: 24px;
@@ -22,7 +35,7 @@
     }
   }
 
-  &__item-descr {
+  &__item-title {
     font-size: $font-larger;
     font-weight: 700;
     margin-left: 3.2%;
