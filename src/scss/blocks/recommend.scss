@@ -4,8 +4,18 @@
   padding-left: 8px;
   padding-bottom: 50px;
 
-/* stylelint-disable*/
+
   &__inner {
+
+    @media (min-width: $screen-lg) {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+
+/* stylelint-disable*/
+  &__wrap {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -35,28 +45,28 @@
     background-color: $light-light;
     box-shadow: 0 0 13px 0 $gray-darker;
     border-radius: 5px;
+  }
 
-    &-title {
-      font-weight: 700;
-      font-size: $font-medium;
-      line-height: 30px;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+  &__blog-title {
+    font-weight: 700;
+    font-size: $font-medium;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 
-    &-describtion {
-      font-size: $font-small;
-      line-height: 25px;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+  &__blog-describtion {
+    font-size: $font-small;
+    line-height: 25px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 
-    &-link {
-      color: $link-color;
-      font-weight: 700;
-      font-size: $font-medium;
-      line-height: 25px;
-    }
+  &__blog-link {
+    color: $link-color;
+    font-weight: 700;
+    font-size: $font-medium;
+    line-height: 25px;
   }
 
   &__photos {
@@ -82,22 +92,23 @@
       top: 0;
       width: 100%;
     }
-
-    &-title {
-      position: absolute;
-      z-index: 2;
-      text-align: center;
-      margin: 0 auto;
-      line-height: 30px;
-      width: 100%;
-    }
-
-    &-link {
-      font-size: $font-medium;
-      color: $light-light;
-      font-weight: 400;
-    }
   }
+
+  &__photos-title {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 30px;
+    width: 100%;
+  }
+
+  &__photos-link {
+    font-size: $font-medium;
+    color: $light-light;
+    font-weight: 400;
+  }
+
 
   &__autumn {
     grid-area: autumn;
@@ -121,32 +132,32 @@
       top: 0;
       width: 100%;
     }
+  }
 
-    &-title {
-      margin-top: 15px;
-      line-height: 30px;
-      position: absolute;
-      z-index: 2;
-      left: 10px;
-    }
+  &__autumn-title {
+    margin-top: 15px;
+    line-height: 30px;
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+  }
 
-    &-link {
-      font-size: $font-medium;
-      font-weight: 700;
-      color: $light-light;
-    }
+  &__autumn-link {
+    font-size: $font-medium;
+    font-weight: 700;
+    color: $light-light;
+  }
 
-    &-describtion {
-      font-size: $font-small;
-      color: $light-light;
-      line-height: 30px;
-      margin-top: 0;
-      position: absolute;
-      left: 10px;
-      top: 60px;
-      z-index: 1;
-      width: 250px;
-    }
+  &__autumn-describtion {
+    font-size: $font-small;
+    color: $light-light;
+    line-height: 30px;
+    margin-top: 0;
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    z-index: 1;
+    width: 250px;
   }
 
   &__feedback {
@@ -158,41 +169,41 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
+  }
 
+  &__feedback-title {
+    font-weight: 700;
+    font-size: $font-medium;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 
-    &-title {
-      font-weight: 700;
-      font-size: $font-medium;
-      line-height: 30px;
-      margin-top: 0;
-      margin-bottom: 10px;
+  &__feedback-describtion {
+    font-size: $font-small;
+    line-height: 25px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__feedback-link {
+    height: 40px;
+    width: 100%;
+    background-color: $dark-dark;
+    border: 0;
+    color: $light-light;
+    font-size: $font-medium;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $color-hover;
     }
 
-    &-describtion {
-      font-size: $font-small;
-      line-height: 25px;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    &-link {
-      height: 40px;
-      width: 100%;
-      background-color: $dark-dark;
-      border: 0;
-      color: $light-light;
-      font-size: $font-medium;
-      font-weight: 700;
-
-      &:hover {
-        background-color: $color-hover;
-      }
-
-      &:active {
-        background-color: $color-pressed;
-      }
+    &:active {
+      background-color: $color-pressed;
     }
   }
+
 
   &__kids {
     grid-area: kids;
@@ -203,25 +214,25 @@
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: 0 3px 9px 1px rgba(64, 66, 172, 0.35);
+  }
 
-    &-title {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
+  &__kids-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 
-    &-link {
-      color: $light-light;
-      font-size: $font-medium;
-      font-weight: 700;
-    }
+  &__kids-link {
+    color: $light-light;
+    font-size: $font-medium;
+    font-weight: 700;
+  }
 
-    &-describtion {
-      color: $light-light;
-      font-size: $font-small;
-      line-height: 25px;
-      font-weight: 400;
-      margin: 0;
-    }
+  &__kids-describtion {
+    color: $light-light;
+    font-size: $font-small;
+    line-height: 25px;
+    font-weight: 400;
+    margin: 0;
   }
 
   &__exchange {
@@ -246,53 +257,58 @@
       top: 0;
       width: 100%;
     }
+  }
 
-    &-title {
-      z-index: 4;
-      position: absolute;
-      top: 15px;
-      left: 10px;
-      margin: 0;
-    }
+  &__exchange-title {
+    z-index: 4;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    margin: 0;
+  }
 
-    &-link {
-      font-size: $font-medium;
-      color: $light-light;
-      font-weight: 700;
-    }
+  &__exchange-link {
+    font-size: $font-medium;
+    color: $light-light;
+    font-weight: 700;
+  }
 
-    &-describtion {
-      font-size: $font-small;
-      color: $light-light;
-      font-weight: 400;
-      line-height: 25px;
-      z-index: 3;
-      position: absolute;
-      top: 70px;
-      left: 10px;
-      margin: 0;
-    }
+  &__exchange-describtion {
+    font-size: $font-small;
+    color: $light-light;
+    font-weight: 400;
+    line-height: 25px;
+    z-index: 3;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    margin: 0;
   }
 
   &__present {
     grid-area: present;
     padding-top: 15px;
-    padding-left: 25px;
 
-    &-title {
-      font-weight: 700;
-      font-size: $font-larger;
-      line-height: 30px;
-      margin-top: 0;
-      margin-bottom: 8px;
+    article {
+      margin-left: 20px;
     }
+  }
 
-    &-describtion {
-      font-size: $font-medium;
-      line-height: 30px;
-      margin-top: 0;
-      margin-bottom: 28px;
-    }
+  &__present-title {
+    font-weight: 700;
+    font-size: $font-larger;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-left: 20px;
+  }
+
+  &__present-describtion {
+    font-size: $font-medium;
+    line-height: 30px;
+    margin-top: 0;
+    margin-bottom: 28px;
+    margin-left: 20px;
   }
 
   //768 px
@@ -310,7 +326,7 @@
     }
 
 /* stylelint-disable*/
-    &__inner {
+    &__wrap {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 170px 230px 230px 230px 170px 170px;
       grid-template-areas:
@@ -448,7 +464,7 @@
     &__present {
       grid-area: present;
       padding-top: 30px;
-      padding-left: 50px;
+      padding-left: 0;
 
       &-title {
         font-weight: 700;
@@ -456,6 +472,7 @@
         line-height: 30px;
         margin-top: 0;
         margin-bottom: 8px;
+        margin-left: 45px;
       }
 
       &-describtion {
@@ -464,6 +481,11 @@
         margin-top: 0;
         margin-bottom: 28px;
         width: 300px;
+        margin-left: 45px;
+      }
+
+      article {
+        margin-left: 45px;
       }
     }
   }
@@ -471,9 +493,9 @@
   //1280 px
 
   @media (min-width: $screen-lg) {
-    padding-right: 59px;
-    padding-left: 40px;
     padding-bottom: 137px;
+    padding-left: 0;
+    padding-right: 0;
 
     &__title {
       font-size: $font-maximum;
@@ -483,9 +505,9 @@
       margin-bottom: 47px;
     }
 
-/* stylelint-disable*/
-    &__inner {
-      grid-template-columns: 300px 285px 285px 1fr;
+    /* stylelint-disable*/
+    &__wrap {
+      grid-template-columns: 300px 285px 285px 285px;
       grid-template-rows: 170px 170px 179px 170px;
       grid-template-areas:
         "blog autumn autumn present"
@@ -493,7 +515,7 @@
         "photos feedback kids present"
         "exchange exchange exchange present";
     }
-/* stylelint-enable*/
+    /* stylelint-enable*/
 
     &__blog {
       padding-top: 20px;
@@ -586,7 +608,7 @@
     &__present {
       grid-area: present;
       padding-top: 30px;
-      padding-left: 20px;
+      padding-left: 0;
 
       &-title {
         font-weight: 700;

@@ -1,7 +1,7 @@
 .form {
   background-color: $gray-light;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 5px;
+  margin-right: 5px;
   position: relative;
   box-shadow: inset 0 0 0 8px $gray-medium;
   margin-bottom: 49px;
@@ -42,38 +42,66 @@
     padding-right: 21px;
     padding-bottom: 91px;
     position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     @media (min-width: $screen-sm) {
       padding-top: 70px;
-      padding-left: 30px;
+      padding-left: 25px;
       padding-bottom: 61px;
-      padding-right: 0;
+      padding-right: 15px;
     }
 
     @media (min-width: $screen-lg) {
       padding-bottom: 74px;
       position: relative;
+      width: 1160px;
+      margin: 0 auto;
+    }
+
+    .field-action {
+      order: 4;
+      width: 100%;
+
+      @media (min-width: $screen-lg) {
+        order: 2;
+        width: 30%;
+        display: inline-block;
+      }
     }
   }
 
   &__header {
+    width: 100%;
+    order: 1;
+  }
 
-    &-title {
-      margin-top: 0;
-      margin-bottom: 21px;
-      font-size: $font-large;
-      font-weight: 700;
+  &__header-title {
+    margin-top: 0;
+    margin-bottom: 21px;
+    font-size: $font-large;
+    font-weight: 700;
+  }
+
+  &__header-describtion {
+    font-size: $font-medium;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 17px;
     }
+  }
 
-    &-describtion {
-      font-size: $font-medium;
-      line-height: 24px;
-      margin-top: 0;
-      margin-bottom: 30px;
+  & .field-text__wrap {
+    order: 2;
+    width: 100%;
 
-      @media (min-width: $screen-lg) {
-        margin-bottom: 45px;
-      }
+    @media (min-width: $screen-lg) {
+      width: 70%;
+      display: inline-block;
     }
   }
 
@@ -83,6 +111,7 @@
       display: inline-block;
       margin-right: 20px;
     }
+
 
 /* stylelint-disable*/
     &__input {
@@ -101,12 +130,14 @@
       }
 
       @media (min-width: $screen-sm) {
-        width: 330px;
+        width: 325px;
         margin-bottom: 38px;
       }
 
       @media (min-width: $screen-lg) {
         width: 360px;
+        padding-top: 30px;
+        margin-bottom: 28px;
 
         &:hover {
           border-bottom: solid 4px $color-normal;
@@ -124,6 +155,8 @@
 
 
 .field-checkbox {
+
+  order: 3;
 
   &__label {
     display: block;
@@ -192,6 +225,7 @@
   }
 }
 
+
 .form__inner .field-action .btn {
   height: 50px;
   width: 100%;
@@ -204,18 +238,13 @@
   margin-top: 29px;
 
 
-
   @media (min-width: $screen-sm) {
     width: 331px;
     margin-top: 43px;
   }
 
   @media (min-width: $screen-lg) {
-    width: 361px;
-    position: absolute;
-    right: 40px;
     margin-top: 0;
-    top: 171px;
 
     &:hover {
       background-color: $color-hover;
@@ -226,6 +255,7 @@
     }
   }
 }
+
 
 #email-error {
   color: $color-error;

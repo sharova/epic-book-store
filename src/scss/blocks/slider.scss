@@ -13,73 +13,70 @@
     }
   }
 
+
   &__item-descr {
-    width: 281px;
     font-size: $font-small;
     line-height: 24px;
     font-style: italic;
     font-weight: 500;
     margin-top: 37px;
-    margin-left: 6.4%;
-    margin-bottom: 0;
+    margin-left: 11px;
+    margin-bottom: 25px;
 
     @media (min-width: $screen-sm) {
       width: 330px;
-      margin-left: 14%;
+      margin-left: 100px;
       margin-top: 37px;
     }
 
     @media (min-width: $screen-lg) {
       margin-top: 56px;
-      margin-left: 12.4%;
+      margin-left: 159px;
+      margin-bottom: 44px;
     }
   }
 
   &__item-title {
     font-size: $font-larger;
     font-weight: 700;
-    margin-left: 3.2%;
-    margin-bottom: 38px;
+    margin-bottom: 33px;
     margin-top: 0;
-    width: 280px;
     line-height: 30px;
 
     @media (min-width: $screen-sm) {
-      width: 433px;
       font-size: $font-large;
       line-height: 40px;
       margin-bottom: 34px;
     }
 
     @media (min-width: $screen-lg) {
-      width: 514px;
       font-size: $font-largest;
       line-height: 50px;
-      margin-left: 6%;
+      width: 530px;
     }
   }
 
   &__item-card {
-    height: 280px;
+    min-height: 280px;
     border: 8px solid $gray-medium;
-    margin-top: 25px;
-    padding-top: 46px;
-    margin-left: 1%;
-    margin-right: 1%;
+    padding-top: 40px;
+    padding-left: 9px;
     box-sizing: border-box;
     position: relative;
 
     @media (min-width: $screen-sm) {
       width: 556px;
-      height: 310px;
-      margin-left: 14%;
+      padding-left: 30px;
+      padding-right: 50px;
+      min-height: 310px;
+      margin-left: 100px;
       padding-top: 43px;
     }
 
     @media (min-width: $screen-lg) {
       width: 499px;
-      height: 350px;
-      margin-left: 9.3%;
+      min-height: 350px;
+      margin-left: 120px;
       padding-top: 43px;
       display: inline-block;
     }
@@ -88,7 +85,6 @@
   &__item-more {
     color: $link-color;
     font-size: $font-medium;
-    margin-left: 3.2%;
 
     &:hover {
       color: $link-color-hover;
@@ -96,10 +92,6 @@
 
     &:active {
       color: $bg-color;
-    }
-
-    @media (min-width: $screen-lg) {
-      margin-left: 6%;
     }
   }
 

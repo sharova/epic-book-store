@@ -1,20 +1,16 @@
 .paginator {
+
+  padding-left: 0;
   list-style-type: none;
-  margin-left: 5%;
   margin-bottom: 63px;
+  margin-top: 0;
 
   @media (min-width: $screen-sm) {
-    margin-left: 9.6%;
     margin-bottom: 81px;
   }
 
   @media (min-width: $screen-lg) {
-    margin-left: 6%;
     margin-bottom: 160px;
-  }
-
-  &__list {
-    padding-left: 0;
   }
 
   &__item {

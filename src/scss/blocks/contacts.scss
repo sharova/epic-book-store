@@ -1,43 +1,37 @@
 .contacts {
   background-color: $gray-light;
 
+  &__inner {
+    width: 300px;
+    margin: 0 auto;
+
+    @media (min-width: $screen-sm) {
+      width: 760px;
+    }
+
+    @media (min-width: $screen-lg) {
+      width: 1160px;
+    }
+  }
+
   &__title {
     font-size: $font-maximum;
     font-weight: 700;
     line-height: 70px;
     margin-top: 36px;
     margin-bottom: 46px;
-    padding-right: 10px;
-    padding-left: 10px;
+
 
     @media (min-width: $screen-sm) {
       margin-top: 45px;
       margin-bottom: 58px;
-      padding-left: 1%;
-      padding-right: 1%;
     }
 
     @media (min-width: $screen-lg) {
       margin-top: 74px;
-      padding-left: 5%;
-      padding-right: 5%;
     }
   }
 
-  &__list-wrap {
-    padding-right: 10px;
-    padding-left: 10px;
-
-    @media (min-width: $screen-sm) {
-      padding-left: 1%;
-      padding-right: 1%;
-    }
-
-    @media (min-width: $screen-lg) {
-      padding-left: 5%;
-      padding-right: 5%;
-    }
-  }
 
   &__list {
     padding-left: 16px;
@@ -68,14 +62,12 @@
       display: inline-block;
       margin-right: 99px;
     }
-
-    @media (min-width: $screen-lg) {
-
-    }
   }
 
-  // &__list-item-phone {
-  // }
+  &__map {
+    width: 1160px;
+    margin: 0 auto;
+  }
 
   &__map iframe {
     width: 100%;
@@ -83,12 +75,6 @@
 
     @media (min-width: $screen-sm) {
       margin-bottom: 49px;
-    }
-
-    @media (min-width: $screen-lg) {
-      width: 1160px;
-      margin-left: 5%;
-      margin-bottom: 60px;
     }
   }
 }

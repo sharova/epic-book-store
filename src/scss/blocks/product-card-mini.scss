@@ -28,10 +28,9 @@
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    width: 231px;
+    width: 260px;
 
     @media (min-width: $screen-sm) {
-      width: 260px;
       min-height: 550px;
     }
   }

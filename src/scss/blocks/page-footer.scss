@@ -1,22 +1,21 @@
 .page-footer {
   height: 80px;
-  background-color: #fff;
-  padding-left: 6.4%;
-  padding-right: 6.4%;
+  background-color: $light-light;
+  padding-left: 11px;
+  padding-right: 11px;
 
   @media (min-width: $screen-sm) {
-    padding-left: 1%;
-    padding-right: 1%;
     height: 50px;
   }
 
-  @media (min-width: $screen-lg) {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
 
   &__inner {
     position: relative;
+
+    @media (min-width: $screen-lg) {
+      width: 1160px;
+      margin: 0 auto;
+    }
 
     & .working-time {
       display: inline-block;
@@ -28,7 +27,7 @@
 
       @media (min-width: $screen-sm) {
         top: 10px;
-        left: 120px;
+        left: 150px;
       }
     }
 

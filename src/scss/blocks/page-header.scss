@@ -28,13 +28,10 @@
 
     @media (min-width: $screen-sm) {
       order: 4;
-      // position: absolute;
-      // right: 6.5%;
-      margin-left: 0;
+      margin-left: 30px;
     }
 
     @media (min-width: $screen-lg) {
-      // right: 8%;
 
       & svg:hover {
         fill: $link-color;
@@ -49,8 +46,7 @@
       display: inline-block;
       order: 5;
       flex: 0 0 auto;
-      // position: absolute;
-      // right: 1%;
+      margin-left: 24px;
     }
 
     @media (min-width: $screen-lg) {
@@ -68,11 +64,11 @@
   @media (min-width: $screen-sm) {
     display: inline-block;
     order: 2;
-    margin-left: 4.7%;
+    margin-left: 25px;
   }
 
   @media (min-width: $screen-lg) {
-    margin-left: 3%;
+    margin-left: 31px;
   }
 }
 

@@ -1,25 +1,28 @@
 .social-counters {
 
-  &:hover &_item svg {
-    fill: $border-color;
-  }
-
-  &:hover &__icon-num {
-    color: $border-color;
-  }
-
-  &:active &_item svg {
-    fill: $link-color;
-  }
-
-  &:active &__icon-num {
-    color: $link-color;
-  }
-
-  &_item {
+  &__item {
     border: none;
     background-color: transparent;
     margin-right: 8px;
+
+    @media (min-width: $screen-lg) {
+
+      &:hover svg {
+        fill: $border-color;
+      }
+
+      &:hover .social-counters__icon-num {
+        color: $border-color;
+      }
+
+      &:active svg {
+        fill: $link-color;
+      }
+
+      &:active .social-counters__icon-num {
+        color: $link-color;
+      }
+    }
   }
 
   &__icon-num {

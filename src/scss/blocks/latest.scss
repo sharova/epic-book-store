@@ -1,6 +1,5 @@
 .latest {
   min-height: 650px;
-  padding-left: 30px;
   background-image: linear-gradient($gray-light 35%, #f4d4e4 35%);
 
 
@@ -13,6 +12,7 @@
     display: block;
     position: relative;
     margin-bottom: 40px;
+    padding-left: 11px;
 
     @media (min-width: $screen-sm) {
       height: 50px;
@@ -23,6 +23,7 @@
     @media (min-width: $screen-lg) {
       width: 1160px;
       margin: 50px auto;
+      padding-left: 0;
     }
   }
 
@@ -45,10 +46,8 @@
     font-size: $font-medium;
 
 
-
     @media (min-width: $screen-sm) {
       position: absolute;
-      display: inline-block;
       right: 0;
       line-height: 50px;
     }
@@ -70,26 +69,28 @@
     min-height: 534px;
     display: flex;
     overflow-x: auto;
+    padding-left: 11px;
+    padding-right: 11px;
+
+    @media (min-width: $screen-sm) {
+      padding: 0;
+    }
 
     @media (min-width: $screen-lg) {
       margin-left: -20px;
       margin-right: -20px;
+      overflow-x: visible;
     }
 
-    &-wrap {
-
-      @media (min-width: $screen-lg) {
-        width: 1160px;
-        margin: 0 auto;
-      }
+    article img {
+      width: 260px;
     }
 
-    & article {
-      width: 220px;
+    article {
+      width: 260px;
       margin-right: 40px;
 
       @media (min-width: $screen-sm) {
-        width: 260px;
         margin-bottom: 0;
         margin-right: 20px;
         margin-left: 20px;
@@ -100,6 +101,14 @@
         margin-right: 20px;
         margin-left: 20px;
       }
+    }
+  }
+
+  &__list-wrap {
+
+    @media (min-width: $screen-lg) {
+      width: 1160px;
+      margin: 0 auto;
     }
   }
 

@@ -9,9 +9,10 @@
   }
 
   &__tabs-wrap {
+
     background: linear-gradient(to bottom, $gray-medium 80%, $gray-light 80%);
     display: block;
-    padding-left: 6.4%;
+    padding-left: 12px;
     margin-bottom: 30px;
     overflow-x: auto;
 
@@ -23,19 +24,18 @@
 
     @media (min-width: $screen-lg) {
       margin-bottom: 41px;
-      overflow-x: visible;
     }
   }
 
   &__tabs {
     list-style-type: none;
-    height: 50px;
-    line-height: 50px;
+    min-height: 60px;
+    line-height: 60px;
     padding: 0;
     overflow-x: auto;
     white-space: nowrap;
-    margin-top: 10px;
     margin-bottom: 0;
+    margin-top: 0;
 
     @media (min-width: $screen-sm) {
       overflow-x: visible;
@@ -64,7 +64,7 @@
   &__tab-link {
     font-size: $font-medium;
     color: $dark-dark;
-    height: 50px;
+    height: 59px;
     display: block;
 
     @media (min-width: $screen-lg) {
@@ -74,20 +74,20 @@
       }
 
       &:focus {
-        padding-bottom: 19px;
         color: $link-color;
         border-bottom: 2px solid $border-color;
       }
     }
+
+    &--active {
+      color: $link-color;
+      border-bottom: 2px solid #ef529f;
+    }
   }
 
-  &__tab-link--active {
-    color: $link-color;
-    border-bottom: 2px solid #ef529f;
-  }
+
 
   &__list {
-
 
     @media (min-width: $screen-sm) {
       margin-left: -45px;
@@ -98,20 +98,18 @@
       margin-left: -20px;
       margin-right: -20px;
     }
+  }
 
-    &-wrap {
+  &__list-wrap {
+    width: 260px;
+    margin: 0 auto;
 
-      width: 231px;
-      margin: 0 auto;
+    @media (min-width: $screen-sm) {
+      width: 610px;
+    }
 
-      @media (min-width: $screen-sm) {
-        width: 610px;
-      }
-
-
-      @media (min-width: $screen-lg) {
-        width: 1160px;
-      }
+    @media (min-width: $screen-lg) {
+      width: 1160px;
     }
   }
 }

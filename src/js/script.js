@@ -4,7 +4,7 @@ import bookCardTemplate from './modules/bookCardTemplate.js';
 import createElement from './modules/createElement.js';
 import sendRequest from './modules/sendRequest.js';
 import $ from 'jquery';
-import slick from '../../node_modules/slick-carousel/slick/slick.min.js';
+import slick from 'slick-carousel';
 import validate from '../../node_modules/jquery-validation/dist/jquery.validate.js';
 import magnificPopup from '../../node_modules/magnific-popup/dist/jquery.magnific-popup.js';
 
@@ -79,20 +79,20 @@ function createDataAjax() {
   return `https://api.do-epixx.ru/htmlpro/bookstore/books/get/${data.page}/${data.perPage}/${data.type}`
 }
 
-const test = $('.slick-slider');
-console.log(test);
 
 //Подключение слайдера на главной
-$('.slick-slider').slick({
-  dots: false,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 1,
-  arrows: true,
-  appendArrows: $('.slider'),
-  prevArrow:'<button class="slick-prev" aria-label="Previous" type="button"></button>',
-  nextArrow:'<button class="slick-next" aria-label="Next" type="button"></button>',
-  adaptiveHeight: true
+$(function(){
+  $('.slick-slider').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    arrows: true,
+    appendArrows: $('.slider'),
+    prevArrow:'<button class="slick-prev" aria-label="Previous" type="button"></button>',
+    nextArrow:'<button class="slick-next" aria-label="Next" type="button"></button>',
+    adaptiveHeight: true
+  });
 });
 
 
@@ -124,20 +124,6 @@ $(function(){
 });
 
 
-
-// $(document).on("click", ".product__describtion-link button", function(e) {
-//     e.preventDefault();
-//     if($(this).text() == "Показать полностью"){
-//         $(this).text("Скрыть")
-//         $('div.product__describtion-text--hidden').removeClass('product__describtion-text--hidden')
-//     } else {
-//         $(this).text("Показать полностью")
-//         $('div:not(.product__describtion-text)').addClass('product__describtion-text--hidden')
-//     };
-
-//     $this.text(linkText);
-// });
-
 //magnific-popup-product preview
 $(document).ready(function() {
   $('.product__preview-wrap').magnificPopup({
@@ -158,3 +144,23 @@ $(document).ready(function() {
     }
   });
 });
+
+// Габургер
+$('.main-nav__toggle').click(function(){
+  $(this).toggleClass('icon-menu');
+  $(this).toggleClass('icon-cross');
+  $('.main-nav__list').toggleClass('down');
+  $('.promo').toggleClass('toggle-margin');
+  $('.recommend').toggleClass('toggle-margin');
+  $('.product').toggleClass('toggle-margin');
+  $('.contacts').toggleClass('toggle-margin');
+  $('.main-nav__list li a').removeClass('down');
+});
+
+$('main-nav__list li a').click(function(){
+    $('.main-nav__toggle').addClass('icon-menu');
+    $('.main-nav__toggle').removeClass('icon-cross');
+    $('.main-nav__list').toggleClass('down');
+});
+
+
