@@ -70,6 +70,37 @@
         display: inline-block;
       }
     }
+
+    .field-action .btn {
+      height: 50px;
+      width: 100%;
+      border-right: 2px;
+      background-color: $dark-dark;
+      border: 0;
+      color: $light-light;
+      font-size: $font-small;
+      font-weight: 700;
+      margin-top: 29px;
+
+
+      @media (min-width: $screen-sm) {
+        width: 331px;
+        margin-top: 43px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-top: 0;
+        /* stylelint-disable*/
+        &:hover {
+          background-color: $color-hover;
+        }
+
+        &:active {
+          background-color: $color-pressed;
+        }
+        /* stylelint-enable*/
+      }
+    }
   }
 
   &__header {
@@ -112,6 +143,13 @@
       margin-right: 20px;
     }
 
+    label.error {
+      color: $color-error;
+      font-size: $font-small;
+      position: absolute;
+      left: 25px;
+      top: 165px;
+    }
 
 /* stylelint-disable*/
     &__input {
@@ -150,127 +188,4 @@
     }
     /* stylelint-enable*/
   }
-}
-
-
-
-.field-checkbox {
-
-  order: 3;
-
-  &__label {
-    display: block;
-    position: relative;
-    padding-left: 28px;
-    user-select: none;
-    cursor: pointer;
-
-    & input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-
-    & input:checked ~ .checkmark {
-      background-color: $gray-medium;
-      border: 0;
-    }
-
-    & input:checked ~ .checkmark:after {
-      display: block;
-    }
-
-    & .checkmark {
-      position: absolute;
-      top: 4px;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border: 4px solid $gray-stronger;
-
-      &:hover {
-        border: 4px solid $color-hover;
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        display: none;
-        left: 5px;
-        top: 2px;
-        width: 10px;
-        height: 13px;
-        border: solid $color-hover;
-        border-width: 0 3px 3px 0;
-        transform: rotate(45deg);
-      }
-    }
-  }
-
-  &__text {
-    font-size: $font-small;
-    line-height: 24px;
-    display: inline-block;
-
-    @media (min-width: $screen-sm) {
-      width: 380px;
-      display: inline-block;
-    }
-
-    & a {
-      color: $link-color;
-    }
-  }
-}
-
-
-.form__inner .field-action .btn {
-  height: 50px;
-  width: 100%;
-  border-right: 2px;
-  background-color: $dark-dark;
-  border: 0;
-  color: $light-light;
-  font-size: $font-small;
-  font-weight: 700;
-  margin-top: 29px;
-
-
-  @media (min-width: $screen-sm) {
-    width: 331px;
-    margin-top: 43px;
-  }
-
-  @media (min-width: $screen-lg) {
-    margin-top: 0;
-
-    &:hover {
-      background-color: $color-hover;
-    }
-
-    &:active {
-      background-color: $color-pressed;
-    }
-  }
-}
-
-
-#email-error {
-  color: $color-error;
-  position: absolute;
-  left: 30px;
-  top: 170px;
-}
-
-#agreement-error {
-  color: $color-error;
-  position: absolute;
-  left: 0;
-  bottom: -30px;
-}
-
-#agreement-error ~ .checkmark {
-  border: 4px solid $color-error;
 }

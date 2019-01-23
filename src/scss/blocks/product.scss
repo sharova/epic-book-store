@@ -195,63 +195,66 @@
     @media (min-width: $screen-lg) {
       margin-bottom: 50px;
     }
+  }
 
-    &-form {
+  &__details-form {
 
-      @media (min-width: $screen-sm) {
-        position: relative;
-        display: block;
-        min-height: 80px;
-      }
+    @media (min-width: $screen-sm) {
+      position: relative;
+      display: block;
+      min-height: 80px;
+    }
+  }
+
+  &__details-field-text {
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      display: inline-block;
+      height: 50px;
+      left: 242px;
     }
 
-    &-field-text {
-      margin-bottom: 20px;
-
-      @media (min-width: $screen-sm) {
-        position: absolute;
-        display: inline-block;
-        height: 50px;
-        left: 242px;
-      }
-
-      @media (min-width: $screen-lg) {
-        left: 282px;
-      }
-
-      & input {
-        width: 80px;
-        height: 50px;
-        border-radius: 2px;
-        background-color: $gray-stronger;
-        border: 0;
-        text-align: center;
-        font-size: $font-medium;
-      }
-
-      & input:hover {
-        background-color: $gray-medium;
-      }
-
-      & input:focus {
-        background-color: $gray-medium;
-        border: 2px solid $gray-stronger;
-        outline: none;
-      }
-
-      & span {
-        font-size: $font-medium;
-        padding-left: 14px;
-      }
+    @media (min-width: $screen-lg) {
+      left: 282px;
     }
 
-    &-field-action {
+    & input {
+      width: 80px;
+      height: 50px;
+      border-radius: 2px;
+      background-color: $gray-stronger;
+      border: 0;
+      text-align: center;
+      font-size: $font-medium;
+    }
 
-      @media (min-width: $screen-sm) {
-        position: absolute;
-        display: inline-block;
-        height: 50px;
-      }
+    & input:hover {
+      background-color: $gray-medium;
+    }
+
+    & input:focus {
+      background-color: $gray-medium;
+      border: 2px solid $gray-stronger;
+      outline: none;
+    }
+
+    & span {
+      font-size: $font-medium;
+      padding-left: 14px;
+    }
+  }
+
+  &__details-field-action {
+
+    @media (min-width: $screen-sm) {
+      position: absolute;
+      display: inline-block;
+      height: 50px;
+    }
+
+    @media (min-width: $screen-lg) {
 
       & .btn:hover {
         background-color: $color-hover;
@@ -261,30 +264,31 @@
         background-color: $color-pressed;
       }
     }
+  }
 
-    &-likes {
-      font-size: $font-small;
-      font-style: italic;
-      padding-left: 25px;
-      position: relative;
-      margin-top: 21px;
+  &__details-likes {
+    font-size: $font-small;
+    font-style: italic;
+    padding-left: 25px;
+    position: relative;
+    margin-top: 21px;
 
-      @media (min-width: $screen-sm) {
-        margin-top: 0;
-      }
+    @media (min-width: $screen-sm) {
+      margin-top: 0;
+    }
 
-      &:before {
-        background-image: url('../img/icon_like.png');
-        content: '';
-        display: block;
-        height: 12px;
-        width: 16px;
-        left: 0;
-        position: absolute;
-        top: 0;
-      }
+    &:before {
+      background-image: url('../img/icon_like.png');
+      content: '';
+      display: block;
+      height: 12px;
+      width: 16px;
+      left: 0;
+      position: absolute;
+      top: 0;
     }
   }
+
 
   &__detail {
     color: $gray-strong;
@@ -305,91 +309,71 @@
 
   &__describtion {
     grid-area: describtion;
+  }
 
-    &-title {
-      margin-top: 0;
-      font-size: $font-larger;
-      font-weight: 700;
-      margin-bottom: 22px;
+  &__describtion-title {
+    margin-top: 0;
+    font-size: $font-larger;
+    font-weight: 700;
+    margin-bottom: 22px;
 
-      @media (min-width: $screen-sm) {
-        margin-top: 40px;
-      }
-
-      @media (min-width: $screen-lg) {
-        margin-top: 10px;
-      }
+    @media (min-width: $screen-sm) {
+      margin-top: 40px;
     }
 
-    &-text {
-      font-size: $font-medium;
-      line-height: 24px;
-
-      @media (min-width: $screen-sm) {
-        width: 660px;
-      }
+    @media (min-width: $screen-lg) {
+      margin-top: 10px;
     }
+  }
 
-    &-text--hidden {
-      font-size: $font-medium;
-      line-height: 24px;
-      display: none;
-      visibility: hidden;
+  &__describtion-text {
+    font-size: $font-medium;
+    line-height: 24px;
 
-      @media (min-width: $screen-sm) {
-        width: 660px;
-      }
+    @media (min-width: $screen-sm) {
+      width: 660px;
     }
+  }
 
+  &__describtion-text--hidden {
+    font-size: $font-medium;
+    line-height: 24px;
 
-    &-link {
-      font-size: $font-medium;
-      color: $link-color;
-      border: 0;
-      background-color: transparent;
-      padding-left: 0;
-      padding-right: 23px;
-      position: relative;
-      margin-bottom: 49px;
-
-      &:before {
-        background-image: url('../../img/arrow_down.png');
-        content: '';
-        display: block;
-        height: 8px;
-        width: 13px;
-        right: 0;
-        position: absolute;
-        bottom: 5px;
-      }
+    @media (min-width: $screen-sm) {
+      width: 660px;
     }
+  }
 
-    &-social {
-      padding-bottom: 100px;
 
-      @media (min-width: $screen-sm) {
-        margin-top: 50px;
-        padding-bottom: 97px;
-      }
+  &__describtion-link {
+    font-size: $font-medium;
+    color: $link-color;
+    border: 0;
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 23px;
+    position: relative;
+    margin-bottom: 49px;
+
+    &:before {
+      background-image: url('../../img/arrow_down.png');
+      content: '';
+      display: block;
+      height: 8px;
+      width: 13px;
+      right: 0;
+      position: absolute;
+      bottom: 5px;
+    }
+  }
+
+  &__describtion-social {
+    padding-bottom: 100px;
+
+    @media (min-width: $screen-sm) {
+      margin-top: 50px;
+      padding-bottom: 97px;
     }
   }
 }
 
-.inner-btn {
-  height: 50px;
-  width: 100%;
-  border-right: 2px;
-  background-color: $dark-dark;
-  border: 0;
-  color: $light-light;
-  font-size: $font-small;
-  font-weight: 700;
-
-  @media (min-width: $screen-sm) {
-    width: 200px;
-  }
-
-  @media (min-width: $screen-lg) {
-    width: 260px;
-  }
-}

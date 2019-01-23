@@ -65,8 +65,12 @@
   }
 
   &__map {
-    width: 1160px;
-    margin: 0 auto;
+    width: 100%;
+
+    @media (min-width: $screen-lg) {
+      width: 1160px;
+      margin: 0 auto;
+    }
   }
 
   &__map iframe {

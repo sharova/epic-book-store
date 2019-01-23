@@ -67,15 +67,27 @@
     font-weight: 700;
     font-size: $font-medium;
     line-height: 25px;
+
+    @media (min-width: $screen-lg) {
+
+      &:hover {
+        color: $link-color-hover;
+      }
+
+      &:active {
+        color: $bg-color;
+      }
+    }
   }
 
   &__photos {
     grid-area: photos;
     border-radius: 5px;
     height: 150px;
-    background-image: url('../../img/bg-photos.png');
+    background-image: url('../../img/bg-photos.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-color: $bg-color;
     background-size: 100% auto;
     position: relative;
     padding-top: 45px;
@@ -114,7 +126,8 @@
     grid-area: autumn;
     height: 150px;
     border-radius: 5px;
-    background-image: url('../../img/bg-book.png');
+    background-image: url('../../img/bg-book.jpg');
+    background-color: $bg-color;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
@@ -238,10 +251,11 @@
   &__exchange {
     grid-area: exchange;
     min-height: 150px;
-    background-image: url('../../img/bg-exchange.png');
+    background-image: url('../../img/bg-exchange.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
+    background-color: $bg-color-third;
     position: relative;
     border-radius: 4px;
 
@@ -344,149 +358,152 @@
       padding-top: 35px;
       padding-left: 30px;
       padding-right: 30px;
-
-      &-title {
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 15px;
-      }
-
-      &-describtion {
-        font-size: $font-medium;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 20px;
-      }
-
-      &-link {
-        line-height: 30px;
-      }
     }
+
+    &__blog-title {
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    &__blog-describtion {
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    &__blog-link {
+      line-height: 30px;
+    }
+
 
     &__photos {
       height: 170px;
       padding-top: 0;
-
-      &-title {
-        line-height: 170px;
-      }
-
-      &-link {
-        font-size: $font-larger;
-      }
     }
+
+    &__photos-title {
+      line-height: 170px;
+    }
+
+    &__photos-link {
+      font-size: $font-larger;
+    }
+
 
     &__autumn {
       height: 170px;
+    }
 
-      &-title {
-        margin-top: 40px;
-        line-height: 30px;
-        margin-bottom: 22px;
-        position: absolute;
-        left: 40%;
-      }
+    &__autumn-title {
+      margin-top: 40px;
+      line-height: 30px;
+      margin-bottom: 22px;
+      position: absolute;
+      left: 40%;
+    }
 
-      &-link {
-        font-size: $font-larger;
-        font-weight: 400;
-      }
+    &__autumn-link {
+      font-size: $font-larger;
+      font-weight: 400;
+    }
 
-      &-describtion {
-        font-size: $font-medium;
-        width: 100%;
-        line-height: 30px;
-        margin-top: 0;
-        position: absolute;
-        left: 30%;
-        top: 85px;
-      }
+    &__autumn-describtion {
+      font-size: $font-medium;
+      width: 100%;
+      line-height: 30px;
+      margin-top: 0;
+      position: absolute;
+      left: 30%;
+      top: 85px;
     }
 
     &__feedback {
       padding-top: 30px;
       padding-left: 30px;
       padding-right: 30px;
-
-
-      &-title {
-        margin-bottom: 15px;
-      }
-
-      &-describtion {
-        font-size: $font-medium;
-        line-height: 30px;
-        margin-bottom: 20px;
-      }
-
-      &-link {
-        height: 50px;
-      }
     }
+
+    &__feedback-title {
+      margin-bottom: 15px;
+    }
+
+    &__feedback-describtion {
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+
+    &__feedback-link {
+      height: 50px;
+    }
+
 
     &__kids {
       padding-top: 35px;
       padding-left: 30px;
       padding-right: 30px;
-
-      &-title {
-        margin-bottom: 20px;
-      }
-
-      &-describtion {
-        font-size: $font-medium;
-        line-height: 30px;
-      }
     }
+
+    &__kids-title {
+      margin-bottom: 20px;
+    }
+
+    &__kids-describtion {
+      font-size: $font-medium;
+      line-height: 30px;
+    }
+
 
     &__exchange {
       height: 170px;
-
-
-      &-title {
-        top: 67px;
-        left: 33%;
-      }
-
-      &-link {
-        font-size: $font-larger;
-        font-weight: 400;
-      }
-
-      &-describtion {
-        font-size: $font-medium;
-        line-height: 30px;
-        top: 104px;
-        left: 31%;
-      }
     }
+
+    &__exchange-title {
+      top: 67px;
+      left: 33%;
+    }
+
+    &__exchange-link {
+      font-size: $font-larger;
+      font-weight: 400;
+    }
+
+    &__exchange-describtion {
+      font-size: $font-medium;
+      line-height: 30px;
+      top: 104px;
+      left: 31%;
+    }
+
 
     &__present {
       grid-area: present;
       padding-top: 30px;
       padding-left: 0;
 
-      &-title {
-        font-weight: 700;
-        font-size: $font-medium;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 8px;
-        margin-left: 45px;
-      }
-
-      &-describtion {
-        font-size: $font-medium;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 28px;
-        width: 300px;
-        margin-left: 45px;
-      }
-
       article {
         margin-left: 45px;
       }
+    }
+
+    &__present-title {
+      font-weight: 700;
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 8px;
+      margin-left: 45px;
+    }
+
+    &__present-describtion {
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 28px;
+      width: 300px;
+      margin-left: 45px;
     }
   }
 
@@ -521,109 +538,108 @@
       padding-top: 20px;
       padding-left: 23px;
       padding-right: 23px;
-
-      &-title {
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
-
-      &-describtion {
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 10px;
-      }
     }
+
+    &__blog-title {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    &__blog-describtion {
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
 
     &__photos {
       height: 360px;
-
-      &-title {
-        top: 125px;
-        left: 35px;
-        margin: 0;
-        width: 230px;
-        line-height: 30px;
-      }
-
-      &-link {
-        font-size: $font-larger;
-      }
     }
+
+    &__photos-title {
+      top: 125px;
+      left: 35px;
+      margin: 0;
+      width: 230px;
+      line-height: 30px;
+    }
+
+    &__photos-link {
+      font-size: $font-larger;
+    }
+
 
     &__autumn {
       height: 350px;
+    }
 
-      &-title {
-        margin-top: 30px;
-        line-height: 30px;
-        margin-bottom: 22px;
-        left: 35%;
-      }
+    &__autumn-title {
+      margin-top: 30px;
+      line-height: 30px;
+      margin-bottom: 22px;
+      left: 35%;
+    }
 
-      &-describtion {
-        margin-top: 0;
-        left: 19%;
-        top: 69px;
-      }
+    &__autumn-describtion {
+      margin-top: 0;
+      left: 19%;
+      top: 69px;
     }
 
     &__feedback {
       padding-top: 20px;
       padding-left: 12px;
       padding-right: 15px;
+    }
 
+    &__feedback-title {
+      margin-bottom: 8px;
+    }
 
-      &-title {
-        margin-bottom: 8px;
-      }
-
-      &-describtion {
-        margin-bottom: 8px;
-      }
+    &__feedback-describtion {
+      margin-bottom: 8px;
     }
 
     &__kids {
       padding-top: 20px;
       padding-left: 17px;
       padding-right: 10px;
-
-      &-title {
-        margin-bottom: 15px;
-      }
     }
 
-    &__exchange {
+    &__kids-title {
+      margin-bottom: 15px;
+    }
 
-      &-title {
-        top: 67px;
-        left: 33%;
-      }
 
-      &-describtion {
-        top: 104px;
-        left: 31%;
-      }
+    &__exchange-title {
+      top: 67px;
+      left: 33%;
+    }
+
+    &__exchange-describtion {
+      top: 104px;
+      left: 31%;
     }
 
     &__present {
       grid-area: present;
       padding-top: 30px;
       padding-left: 0;
+    }
 
-      &-title {
-        font-weight: 700;
-        font-size: $font-medium;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 8px;
-      }
+    &__present-title {
+      font-weight: 700;
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
 
-      &-describtion {
-        font-size: $font-medium;
-        line-height: 30px;
-        margin-top: 0;
-        margin-bottom: 28px;
-      }
+    &__present-describtion {
+      font-size: $font-medium;
+      line-height: 30px;
+      margin-top: 0;
+      margin-bottom: 28px;
     }
   }
 }

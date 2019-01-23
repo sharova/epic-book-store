@@ -1,0 +1,16 @@
+.working-time {
+  color: $gray-darker;
+  font-size: $font-small;
+  display: none;
+  line-height: 50px;
+
+  @media (min-width: $screen-sm) {
+    display: inline-block;
+    order: 2;
+    margin-left: 25px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 31px;
+  }
+}

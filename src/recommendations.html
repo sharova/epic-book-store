@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Рекомендации</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="preload" href="fonts/montserrat-v12-latin_cyrillic-500.woff2" as="font">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
@@ -23,23 +24,30 @@
         <button class="main-nav__toggle">
           <span></span>
         </button>
+        <button class="main-nav__cross">
+          <span>&#735;</span>
+        </button>
+
+        <a href="" class="page-header__cart">
+          <svg width="20" height="21">
+            <use xlink:href="img/sprite.svg#icon_cart"></use>
+          </svg>
+        </a>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="inner.html" class="main-nav__link">книги</a></li>
           <li class="main-nav__item"><a href="recommendations.html" class="main-nav__link main-nav__link--active">рекомендации</a></li>
           <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">контакты</a></li>
+
+          <a href="tel:+79111234567" class="page-header__phone">
+            <svg width="16" height="16">
+              <use xlink:href="img/sprite.svg#icon_phone"></use>
+            </svg>
+            <span>8 800 500-80-20</span>
+          </a>
         </ul>
       </nav>
 
-      <a href="" class="page-header__cart">
-        <svg width="20" height="21">
-          <use xlink:href="img/sprite.svg#icon_cart"></use>
-        </svg>
-      </a>
-      <a href="tel:+79111234567" class="page-header__phone">
-        <svg width="16" height="16">
-          <use xlink:href="img/sprite.svg#icon_phone"></use>
-        </svg>
-      </a>
+
 
     </div>
   </header>
@@ -72,7 +80,7 @@
         <div class="recommend__feedback">
           <h2 class="recommend__feedback-title">Нам важно ваше мнение!</h2>
           <p class="recommend__feedback-describtion">Ставьте пальцы вверх, мы хотим знать ваше мнение</p>
-          <button href="" class="recommend__feedback-link btn">Проголовать</button>
+          <button class="recommend__feedback-link btn">Проголовать</button>
         </div>
 
         <div class="recommend__exchange">
@@ -87,7 +95,7 @@
           <article class="product-card-mini">
             <div class="product-card-mini__wrap">
               <h2 class="product-card-mini__title"><a href="">Путеводитель по лжи</a></h2>
-              <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-putevoditel-po-lzhi.jpg" alt="" class="product-card-mini__img"></a>
+              <a href="" class="product-card-mini__img-wrap"><img width="260" height="366" src="img/books/book-putevoditel-po-lzhi.jpg" alt="book-putevoditel-po-lzhi" class="product-card-mini__img"></a>
               <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
             </div>
           </article>
@@ -110,7 +118,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__inner">
-      <a href="/" class="logo"><img src="img/book-store-logo.png" alt="book store"></a>
+      <a href="/" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
       <a href="" class="page-footer__contacts">контакты</a>
 

@@ -2,6 +2,7 @@
   height: 311px;
   width: 100%;
   background-image: url('../img/library.jpg');
+  background-color: $color-hover;
   position: relative;
 
   &:after {

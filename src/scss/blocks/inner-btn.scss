@@ -1,0 +1,18 @@
+.inner-btn {
+  height: 50px;
+  width: 100%;
+  border-right: 2px;
+  background-color: $dark-dark;
+  border: 0;
+  color: $light-light;
+  font-size: $font-small;
+  font-weight: 700;
+
+  @media (min-width: $screen-sm) {
+    width: 200px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 260px;
+  }
+}

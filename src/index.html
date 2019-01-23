@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Документ</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="preload" href="fonts/montserrat-v12-latin_cyrillic-500.woff2" as="font">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
@@ -20,13 +21,23 @@
       <span class="working-time">с 9:00 до 19:00</span>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle icon-menu">
+        <button class="main-nav__toggle">
           <span></span>
+        </button>
+        <button class="main-nav__cross">
+          <span>&#735;</span>
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="inner.html" class="main-nav__link">книги</a></li>
           <li class="main-nav__item"><a href="recommendations.html" class="main-nav__link">рекомендации</a></li>
           <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">контакты</a></li>
+
+          <a href="tel:+79111234567" class="page-header__phone">
+            <svg width="16" height="16">
+              <use xlink:href="img/sprite.svg#icon_phone"></use>
+            </svg>
+            <span>8 800 500-80-20</span>
+          </a>
         </ul>
       </nav>
 
@@ -35,11 +46,7 @@
           <use xlink:href="img/sprite.svg#icon_cart"></use>
         </svg>
       </a>
-      <a href="tel:+79111234567" class="page-header__phone">
-        <svg width="16" height="16">
-          <use xlink:href="img/sprite.svg#icon_phone"></use>
-        </svg>
-      </a>
+
 
     </div>
   </header>
@@ -55,7 +62,7 @@
               <h2 class="slider__item-title">Для поклонников сериала "Симпсоны" и&nbsp;для всех, кому интересна математика.</h2>
               <a href="" class="slider__item-more">Хочу узнать о книге больше</a>
             </div>
-            <a href="" class="slider__item-img-link"><img src="img/books_all/simpsony-i-ikh-matematicheskie-sekrety.png" alt="" class="slider__item-img"></a>
+            <a href="" class="slider__item-img-link"><img width="302" height="425" src="img/books_all/simpsony-i-ikh-matematicheskie-sekrety.png" alt="simpsony-i-ikh-matematicheskie-sekrety" class="slider__item-img"></a>
           </div>
 
           <div class="slider__item">
@@ -64,7 +71,7 @@
               <h2 class="slider__item-title">Книга про правила российского руководителя</h2>
               <a href="" class="slider__item-more">Хочу узнать о книге больше</a>
             </div>
-            <a href="" class="slider__item-img-link"><img src="img/books_all/45-tatuirovok-prodavana.png" alt="" class="slider__item-img"></a>
+            <a href="" class="slider__item-img-link"><img width="302" height="425" src="img/books_all/45-tatuirovok-prodavana.png" alt="45-tatuirovok-prodavana" class="slider__item-img"></a>
           </div>
 
           <div class="slider__item">
@@ -73,7 +80,7 @@
               <h2 class="slider__item-title">Искусство и практика обучающейся организации</h2>
               <a href="" class="slider__item-more">Хочу узнать о книге больше</a>
              </div>
-            <a href="" class="slider__item-img-link"><img src="img/books_all/pyataya-distsiplina.png" alt="" class="slider__item-img"></a>
+            <a href="" class="slider__item-img-link"><img width="302" height="425" src="img/books_all/pyataya-distsiplina.png" alt="pyataya-distsiplina" class="slider__item-img"></a>
           </div>
         </div>
       </div>
@@ -111,13 +118,13 @@
       </div>
 
       <ul class="paginator">
-        <li class="paginator__item"><span href="" class="paginator__link paginator__link--active">1</span></li>
-        <li class="paginator__item"><span href="" class="paginator__link">2</span></li>
-        <li class="paginator__item"><span href="" class="paginator__link">3</span></li>
-        <li class="paginator__item"><span href="" class="paginator__link">4</span></li>
-        <li class="paginator__item"><span href="" class="paginator__link">5</span></li>
-        <li class="paginator__item"><span href="" class="paginator__link">...</span></li>
-        <li class="paginator__item"><span href="" class="paginator__link">10</span></li>
+        <li class="paginator__item"><span class="paginator__link paginator__link--active">1</span></li>
+        <li class="paginator__item"><span class="paginator__link">2</span></li>
+        <li class="paginator__item"><span class="paginator__link">3</span></li>
+        <li class="paginator__item"><span class="paginator__link">4</span></li>
+        <li class="paginator__item"><span class="paginator__link">5</span></li>
+        <li class="paginator__item"><span class="paginator__link">...</span></li>
+        <li class="paginator__item"><span class="paginator__link">10</span></li>
       </ul>
 
     </div>
@@ -167,7 +174,7 @@
         <article class="product-card-mini">
           <div class="product-card-mini__wrap">
             <h2 class="product-card-mini__title"><a href="">Латеральная логика</a></h2>
-            <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-lateralnaya-logika.jpg" alt="" class="product-card-mini__img"></a>
+            <a href="" class="product-card-mini__img-wrap"><img width="260" height="366" src="img/books/book-lateralnaya-logika.jpg" alt="book-lateralnaya-logika" class="product-card-mini__img"></a>
             <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
           </div>
         </article>
@@ -175,7 +182,7 @@
         <article class="product-card-mini">
           <div class="product-card-mini__wrap">
             <h2 class="product-card-mini__title"><a href="">Путеводитель по лжи</a></h2>
-            <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-putevoditel-po-lzhi.jpg" alt="" class="product-card-mini__img"></a>
+            <a href="" class="product-card-mini__img-wrap"><img width="260" height="366" src="img/books/book-putevoditel-po-lzhi.jpg" alt="book-putevoditel-po-lzhi" class="product-card-mini__img"></a>
             <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
           </div>
         </article>
@@ -183,7 +190,7 @@
         <article class="product-card-mini">
           <div class="product-card-mini__wrap">
             <h2 class="product-card-mini__title"><a href="">Дао физики</a></h2>
-            <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-dao-fiziki.jpg" alt="" class="product-card-mini__img"></a>
+            <a href="" class="product-card-mini__img-wrap"><img width="260" height="366" src="img/books/book-dao-fiziki.jpg" alt="book-dao-fiziki" class="product-card-mini__img"></a>
             <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
           </div>
         </article>
@@ -191,7 +198,7 @@
         <article class="product-card-mini">
           <div class="product-card-mini__wrap">
             <h2 class="product-card-mini__title"><a href="">Не очевидно</a></h2>
-            <a href="" class="product-card-mini__img-wrap"><img src="img/books/book-ne-ochevidno.jpg" alt="" class="product-card-mini__img"></a>
+            <a href="" class="product-card-mini__img-wrap"><img width="260" height="366" src="img/books/book-ne-ochevidno.jpg" alt="book-ne-ochevidno" class="product-card-mini__img"></a>
             <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
           </div>
         </article>
@@ -202,7 +209,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__inner">
-      <a href="/" class="logo"><img src="img/book-store-logo.png" alt="book store"></a>
+      <a href="/" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
       <a href="" class="page-footer__contacts">контакты</a>
 

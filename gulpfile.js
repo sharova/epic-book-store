@@ -22,6 +22,10 @@ const ghpages = require('gh-pages');
 const path = require('path');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
+const csso = require('gulp-csso');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const webpHTML = require('gulp-webp-html');
 
 function styles() {
   return src(`${dir.src}scss/style.scss`)
@@ -31,6 +35,7 @@ function styles() {
     .pipe(postcss([
       autoprefixer({browsers: ['last 2 version'], grid: true}),
     ]))
+    .pipe(csso())
     .pipe(sourcemaps.write('/'))
     .pipe(dest(`${dir.build}css/`))
     .pipe(browserSync.stream());
@@ -40,6 +45,7 @@ exports.styles = styles;
 function copyHTML() {
   return src(`${dir.src}*.html`)
     .pipe(plumber())
+    .pipe(webpHTML())
     .pipe(dest(dir.build));
 }
 exports.copyHTML = copyHTML;
@@ -48,6 +54,9 @@ exports.copyHTML = copyHTML;
 function copyImg() {
   return src(`${dir.src}img/**/*.{jpg,jpeg,png,gif,svg,webp}`)
     .pipe(plumber())
+    .pipe(imagemin())
+    .pipe(dest(`${dir.build}img/`))
+    .pipe(webp())
     .pipe(dest(`${dir.build}img/`));
 }
 exports.copyImg = copyImg;
@@ -66,6 +75,7 @@ function buildSvgSprite() {
     .pipe(dest(`${dir.build}img/`));
 }
 exports.buildSvgSprite = buildSvgSprite;
+
 
 function copyVendorsJs() {
   return src([

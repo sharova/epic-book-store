@@ -146,21 +146,37 @@ $(document).ready(function() {
 });
 
 // Габургер
-$('.main-nav__toggle').click(function(){
-  $(this).toggleClass('icon-menu');
-  $(this).toggleClass('icon-cross');
-  $('.main-nav__list').toggleClass('down');
-  $('.promo').toggleClass('toggle-margin');
-  $('.recommend').toggleClass('toggle-margin');
-  $('.product').toggleClass('toggle-margin');
-  $('.contacts').toggleClass('toggle-margin');
-  $('.main-nav__list li a').removeClass('down');
+
+$(window).on('resize', function(){
+      var win = $(this);
+      if (win.height() <= 767) {
+        $( document ).ready(function() {
+
+          $( ".main-nav__list" ).hide();
+          $( ".main-nav__toggle" ).click(function() {
+          $( ".main-nav__list" ).slideToggle( "slow", function() {
+          $( ".main-nav__toggle" ).hide();
+          $( ".main-nav__cross" ).show();
+          });
+        });
+
+        $( ".main-nav__cross" ).click(function() {
+          $( ".main-nav__list" ).slideToggle( "slow", function() {
+          $( ".main-nav__cross" ).hide();
+          $( ".main-nav__toggle" ).show();
+          });
+        });
+
+        });
+       }
 });
 
-$('main-nav__list li a').click(function(){
-    $('.main-nav__toggle').addClass('icon-menu');
-    $('.main-nav__toggle').removeClass('icon-cross');
-    $('.main-nav__list').toggleClass('down');
+//Полный текст в описании книги
+
+$(document).ready(function() {
+  $( ".product__describtion-text--hidden" ).hide();
+  $( ".product__describtion-link" ).click(function() {
+  $( ".product__describtion-text--hidden" ).show();
+  $( ".product__describtion-link" ).hide();
+  });
 });
-
-

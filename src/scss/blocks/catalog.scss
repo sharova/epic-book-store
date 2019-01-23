@@ -41,11 +41,11 @@
       overflow-x: visible;
       white-space: normal;
       margin: 0 auto;
-      width: 760px;
+      width: 750px;
     }
 
     @media (min-width: $screen-lg) {
-      margin-left: 150px;
+      width: 920px;
     }
   }
 

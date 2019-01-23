@@ -111,106 +111,106 @@
   &__item-img-link {
     display: inline-block;
   }
-}
 
-
-.slick-prev,
-.slick-next {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: $color-normal;
-  border: none;
-  color: $border-color;
-  text-align: center;
-  font-size: 20px;
-  position: absolute;
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  background-color: $color-hover;
-}
-
-.slick-prev {
-  left: 30%;
-  bottom: 20px;
-  z-index: 2;
-
-  @media (min-width: $screen-sm) {
-    bottom: 44%;
-    left: 1%;
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $color-normal;
+    border: none;
+    color: $border-color;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
   }
 
-  @media (min-width: $screen-lg) {
-    bottom: 48%;
-    left: 4.6%;
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: $color-hover;
+  }
+
+  .slick-prev {
+    left: 30%;
+    bottom: 20px;
+    z-index: 2;
+
+    @media (min-width: $screen-sm) {
+      bottom: 44%;
+      left: 1%;
+    }
+
+    @media (min-width: $screen-lg) {
+      bottom: 48%;
+      left: 4.6%;
+    }
+  }
+
+  .slick-prev:before {
+    content: '';
+    width: 9px;
+    height: 16px;
+    background-image: url('../img/arrow-left.png');
+    left: 13px;
+    top: 13px;
+    display: block;
+    position: absolute;
+  }
+
+  .slick-prev:hover:before {
+    content: '';
+    width: 9px;
+    height: 16px;
+    background-image: url('../img/arrow-left-hover.png');
+    left: 13px;
+    top: 13px;
+    display: block;
+    position: absolute;
+  }
+
+  .slick-next {
+    right: 30%;
+    bottom: 20px;
+
+    @media (min-width: $screen-sm) {
+      bottom: 42%;
+      right: 1%;
+    }
+
+    @media (min-width: $screen-lg) {
+      bottom: 48%;
+      right: 4.6%;
+    }
+  }
+
+  .slick-next:before {
+    content: '';
+    width: 9px;
+    height: 16px;
+    background-image: url('../img/arrow-right.png');
+    right: 13px;
+    top: 13px;
+    display: block;
+    position: absolute;
+  }
+
+  .slick-next:hover:before {
+    content: '';
+    width: 9px;
+    height: 16px;
+    background-image: url('../img/arrow-right-hover.png');
+    right: 13px;
+    top: 13px;
+    display: block;
+    position: absolute;
+  }
+
+  .slick-disabled {
+    background-color: $gray-medium;
+  }
+
+  .slick-disabled:hover {
+    background-color: $gray-medium;
   }
 }
 
-.slick-prev:before {
-  content: '';
-  width: 9px;
-  height: 16px;
-  background-image: url('../img/arrow-left.png');
-  left: 13px;
-  top: 13px;
-  display: block;
-  position: absolute;
-}
-
-.slick-prev:hover:before {
-  content: '';
-  width: 9px;
-  height: 16px;
-  background-image: url('../img/arrow-left-hover.png');
-  left: 13px;
-  top: 13px;
-  display: block;
-  position: absolute;
-}
-
-.slick-next {
-  right: 30%;
-  bottom: 20px;
-
-  @media (min-width: $screen-sm) {
-    bottom: 42%;
-    right: 1%;
-  }
-
-  @media (min-width: $screen-lg) {
-    bottom: 48%;
-    right: 4.6%;
-  }
-}
-
-.slick-next:before {
-  content: '';
-  width: 9px;
-  height: 16px;
-  background-image: url('../img/arrow-right.png');
-  right: 13px;
-  top: 13px;
-  display: block;
-  position: absolute;
-}
-
-.slick-next:hover:before {
-  content: '';
-  width: 9px;
-  height: 16px;
-  background-image: url('../img/arrow-right-hover.png');
-  right: 13px;
-  top: 13px;
-  display: block;
-  position: absolute;
-}
-
-.slick-disabled {
-  background-color: $gray-medium;
-}
-
-.slick-disabled:hover {
-  background-color: $gray-medium;
-}
