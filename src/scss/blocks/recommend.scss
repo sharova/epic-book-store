@@ -84,7 +84,7 @@
     grid-area: photos;
     border-radius: 5px;
     height: 150px;
-    background-image: url('../../img/bg-photos.jpg');
+    background-image: url('../img/bg-photos.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-color: $bg-color;
@@ -126,7 +126,7 @@
     grid-area: autumn;
     height: 150px;
     border-radius: 5px;
-    background-image: url('../../img/bg-book.jpg');
+    background-image: url('../img/bg-book.jpg');
     background-color: $bg-color;
     background-repeat: no-repeat;
     background-position: center;
@@ -251,7 +251,7 @@
   &__exchange {
     grid-area: exchange;
     min-height: 150px;
-    background-image: url('../../img/bg-exchange.jpg');
+    background-image: url('../img/bg-exchange.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
