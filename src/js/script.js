@@ -145,13 +145,13 @@ $(document).ready(function() {
   });
 });
 
-// Габургер
+// Гамбургер
+
 
 $(window).on('resize', function(){
       var win = $(this);
-      if (win.height() <= 767) {
-        $( document ).ready(function() {
-
+      if (win.height() <= 768) {
+        $(document).ready(function() {
           $( ".main-nav__list" ).hide();
           $( ".main-nav__toggle" ).click(function() {
           $( ".main-nav__list" ).slideToggle( "slow", function() {
@@ -170,6 +170,7 @@ $(window).on('resize', function(){
         });
        }
 });
+
 
 //Полный текст в описании книги
 

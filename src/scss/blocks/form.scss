@@ -163,6 +163,10 @@
       font-family: 'Montserrat';
       font-size: $font-medium;
 
+      &:focus {
+        border-bottom: solid 4px $color-hover;
+      }
+
       &.error {
         border-bottom: solid 4px $color-error;
       }
@@ -181,9 +185,7 @@
           border-bottom: solid 4px $color-normal;
         }
 
-        &:focus {
-          border-bottom: solid 4px $color-hover;
-        }
+
       }
     }
     /* stylelint-enable*/
