@@ -149,8 +149,7 @@ $(document).ready(function() {
 
 
 $(window).on('resize', function(){
-      var win = $(this);
-      if (win.height() <= 768) {
+      if (window.matchMedia('(max-width: 767px)').matches){
         $(document).ready(function() {
           $( ".main-nav__list" ).hide();
           $( ".main-nav__toggle" ).click(function() {
