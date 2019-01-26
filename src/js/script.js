@@ -147,28 +147,18 @@ $(document).ready(function() {
 
 // Гамбургер
 
+let toggle = document.getElementById('toggle');
+let menu = document.getElementById('menuList');
 
-$(window).on('resize', function(){
-      if (window.matchMedia('(max-width: 767px)').matches){
-        $(document).ready(function() {
-          $( ".main-nav__list" ).hide();
-          $( ".main-nav__toggle" ).click(function() {
-          $( ".main-nav__list" ).slideToggle( "slow", function() {
-          $( ".main-nav__toggle" ).hide();
-          $( ".main-nav__cross" ).show();
-          });
-        });
+toggle.classList.remove('main-nav__toggle--close');
+menu.classList.remove('main-nav__list--open');
 
-        $( ".main-nav__cross" ).click(function() {
-          $( ".main-nav__list" ).slideToggle( "slow", function() {
-          $( ".main-nav__cross" ).hide();
-          $( ".main-nav__toggle" ).show();
-          });
-        });
-
-        });
-       }
-});
+toggle.addEventListener('click', menuVisible);
+function menuVisible(e) {
+  e.preventDefault();
+  toggle.classList.toggle('main-nav__toggle--close');
+  menu.classList.toggle('main-nav__list--open');
+};
 
 
 //Полный текст в описании книги

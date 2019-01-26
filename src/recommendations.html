@@ -17,27 +17,24 @@
 
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="/" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
+      <a href="index.html" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle">
+        <button id="toggle" class="main-nav__toggle main-nav__toggle--close">
           <span></span>
         </button>
-        <button class="main-nav__cross">
-          <span>&#735;</span>
-        </button>
-        <ul class="main-nav__list">
+        <ul id="menuList" class="main-nav__list main-nav__list--open">
           <li class="main-nav__item"><a href="inner.html" class="main-nav__link">книги</a></li>
           <li class="main-nav__item"><a href="recommendations.html" class="main-nav__link main-nav__link--active">рекомендации</a></li>
           <li class="main-nav__item"><a href="contacts.html" class="main-nav__link">контакты</a></li>
 
-          <a href="tel:+79111234567" class="page-header__phone">
+          <li class="main-nav__item"><a href="tel:+79111234567" class="page-header__phone">
             <svg width="16" height="16">
               <use xlink:href="img/sprite.svg#icon_phone"></use>
             </svg>
             <span>8 800 500-80-20</span>
-          </a>
+          </a></li>
         </ul>
       </nav>
 
@@ -117,9 +114,9 @@
 
   <footer class="page-footer">
     <div class="page-footer__inner">
-      <a href="/" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
+      <a href="index.html" class="logo"><img width="127" height="14" src="img/book-store-logo.png" alt="book store"></a>
       <span class="working-time">с 9:00 до 19:00</span>
-      <a href="" class="page-footer__contacts">контакты</a>
+      <a href="contacts.html" class="page-footer__contacts">контакты</a>
 
       <nav class="main-nav">
         <ul class="main-nav__list">
